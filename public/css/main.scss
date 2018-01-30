@@ -1,0 +1,41 @@
+@import "_variables";
+@import "_blocks";
+
+@import "_buttons";
+
+@import "_building-card";
+
+
+// ------------------------------------------------------------------------------------------
+
+
+// ---------------
+// Base
+// ---------------
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background: $white;
+  color: $black-50;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content-wrap {
+  width: calc(100vw - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+hr {
+  outline: none;
+  border: none;
+  height: 1px;
+  background: $bg-5;
+  margin: 40px 0;
+}

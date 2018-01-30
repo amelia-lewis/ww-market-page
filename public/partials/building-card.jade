@@ -1,0 +1,36 @@
+mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, banner)
+	.building-card
+		.image(style="background-image: url('" + img + "');")
+		.text-container
+			.row
+				.col-xs-12
+					h3= name
+			
+			.row
+				.col-xs-12
+					p= address
+
+			if poPrice
+				.row
+					.col-xs-6
+						p Private Office
+					.col-xs-6
+						p= poPrice
+
+			if ddPrice
+				.row
+					.col-xs-6
+						p Dedicated Desk
+					.col-xs-6
+						p= ddPrice
+
+			if hdPrice
+				.row
+					.col-xs-6
+						p Hot desk
+					.col-xs-6
+						p= hdPrice
+
+			.row
+				.col-xs-12
+					a.btn.btn--primary-navigation Explore Location

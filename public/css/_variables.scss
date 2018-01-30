@@ -1,0 +1,80 @@
+// ---------------
+// Screen sizes
+// ---------------
+
+// Extra small screen / phone
+$screen-xs-min: 480px !default;
+
+// Small screen / tablet
+$screen-sm-min: 768px !default;
+
+// Medium screen / desktop
+$screen-md-min: 1024px !default;
+
+// Large screen / wide desktop
+$screen-lg-min: 1440px;
+
+// So media queries dont overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+
+// ---------------
+// Colors
+// ---------------
+
+$white: #ffffff;
+$notwhite: #fffffc;
+
+$black-50: #252729;
+$black-80: darken($black-50, 30%);
+$black-70: darken($black-50, 20%);
+$black-60: darken($black-50, 10%);
+$black-40: lighten($black-50, 10%);
+$black-30: lighten($black-50, 20%);
+$black-20: lighten($black-50, 30%);
+
+$gray-50: #c1c1c2;
+$gray-80: darken($gray-50, 30%);
+$gray-70: darken($gray-50, 20%);
+$gray-60: darken($gray-50, 10%);
+$gray-40: lighten($gray-50, 10%);
+$gray-30: lighten($gray-50, 20%);
+$gray-20: lighten($gray-50, 30%);
+
+$yellow-50: #ffcf71;
+$yellow-80: darken($yellow-50, 30%);
+$yellow-70: darken($yellow-50, 20%);
+$yellow-60: darken($yellow-50, 10%);
+$yellow-40: lighten($yellow-50, 10%);
+$yellow-30: lighten($yellow-50, 20%);
+$yellow-20: lighten($yellow-50, 30%);
+
+$blue-50: #5499c3;
+$blue-80: darken($blue-50, 30%);
+$blue-70: darken($blue-50, 20%);
+$blue-60: darken($blue-50, 10%);
+$blue-40: lighten($blue-50, 10%);
+$blue-30: lighten($blue-50, 20%);
+$blue-20: lighten($blue-50, 30%);
+
+$red-50: #d86262;
+$red-80: darken($red-50, 30%);
+$red-70: darken($red-50, 20%);
+$red-60: darken($red-50, 10%);
+$red-40: lighten($red-50, 10%);
+$red-30: lighten($red-50, 20%);
+$red-20: lighten($red-50, 30%);
+
+$green-50: #208132;
+$green-80: darken($green-50, 30%);
+$green-70: darken($green-50, 20%);
+$green-60: darken($green-50, 10%);
+$green-40: lighten($green-50, 10%);
+$green-30: lighten($green-50, 20%);
+$green-20: lighten($green-50, 30%);
+
+$bg-5: rgba($black-50, 0.05);
+$bg-3: rgba($black-50, 0.03);
+$bg-1: rgba($black-50, 0.01);

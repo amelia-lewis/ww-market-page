@@ -1,0 +1,74 @@
+// ---------------
+// Blocks
+// ---------------
+
+@mixin make-block($size, $padding) {
+  .block-hor-#{$size} {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+
+  .block-left-#{$size} {
+    padding-left: $padding;
+  }
+
+  .block-right-#{$size} {
+    padding-right: $padding;
+  }
+
+  .block-ver-#{$size} {
+    padding-top: $padding;
+    padding-bottom: $padding;
+  }
+
+  .block-bot-#{$size} {
+    padding-bottom: $padding;
+  }
+
+  .block-top-#{$size} {
+    padding-top: $padding;
+  }
+
+  .block-#{$size} {
+    padding: $padding;
+  }
+}
+
+@mixin make-block-variant($name, $color) {
+  .block-#{$name} {
+    background: $color;
+  }
+}
+
+@include make-block(xl, 75px);
+@include make-block(lg, 50px);
+@include make-block(md, 40px);
+@include make-block(sm, 30px);
+@include make-block(xs, 10px);
+
+@include make-block-variant("black-50", $black-50);
+@include make-block-variant("bg-5", $bg-5);
+@include make-block-variant("bg-3", $bg-3);
+@include make-block-variant("bg-1", $bg-1);
+@include make-block-variant("white", white);
+
+
+// ---------------
+// Responsive block
+// ---------------
+
+.responsive-block {
+	padding: 30px 0;
+
+	@media (min-width: $screen-sm-min) {
+		padding: 40px 0;
+	}
+
+	@media (min-width: $screen-md-min) {
+		padding: 50px 0;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		padding: 75px 0;
+	}
+}
