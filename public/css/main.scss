@@ -1,7 +1,13 @@
 @import "_variables";
 @import "_blocks";
 
+@import "_text-styles";
 @import "_buttons";
+
+@import "_header";
+@import "_footer";
+
+@import "_market-page";
 
 @import "_building-card";
 
@@ -13,13 +19,19 @@
 // Base
 // ---------------
 
+html {
+  background: $bg-3;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: $apercu;
   font-size: 16px;
   background: $white;
   color: $black-50;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 1600px;
+  min-height: 100vh;
 }
 
 * {
@@ -37,5 +49,5 @@ hr {
   border: none;
   height: 1px;
   background: $bg-5;
-  margin: 40px 0;
+  margin: 10px 0;
 }

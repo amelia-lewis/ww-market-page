@@ -1,0 +1,53 @@
+// ---------------
+// Header
+// ---------------
+
+header {
+	border-bottom: 1px solid $gray-30;
+	height: 80px;
+	display: flex;
+	align-items: center;
+
+	.row {
+		margin: 0;
+	}
+
+	.header-lhs {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.header-nav {
+		display: flex;
+		flex-direction: row;
+		list-style: none;
+		margin: 4px 0 0 30px;
+		padding: 0;
+
+		li {
+			margin: 0 20px 0 0;
+
+			a {
+				@extend .text-medium;
+				position: relative;
+
+				&:after {
+					content: "";
+					position: absolute;
+					bottom: -2px;
+					left: 0;
+					right: 0;
+					height: 2px;
+					background: $black-50;
+					transform: scale(0, 1);
+					transform-origin: left center;
+					transition: all 400ms;
+				}
+
+				&:hover:after {
+					transform: scale(1, 1);
+				}
+			}
+		}
+	}
+}

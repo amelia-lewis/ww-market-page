@@ -7,4 +7,25 @@ html
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css")
 	
 	body
+		header
+			.content-wrap
+				.row.middle-xs.between-xs
+					.header-lhs
+						a(href="/").header-logo
+							include partials/logo
+						ul.header-nav
+							li: a(href="") Locations
+							li: a(href="") Plans &amp; Pricing
+							li: a(href="") Enterprise
+							li: a(href="") Mission
+					.header-rhs
+						button.btn.btn--secondary-navigation Log In
+		
 		!= yield
+
+		footer
+			.content-wrap
+				.row
+					.col-xs-12
+						.responsive-block
+							p.copy-1 Footer

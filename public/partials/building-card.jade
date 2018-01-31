@@ -1,35 +1,44 @@
-mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, banner)
+mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, banner, presale)
 	.building-card
+		if banner
+			.banner= banner
 		.image(style="background-image: url('" + img + "');")
 		.text-container
-			.row
-				.col-xs-12
-					h3= name
-			
-			.row
-				.col-xs-12
-					p= address
-
-			if poPrice
+			.info
 				.row
-					.col-xs-6
-						p Private Office
-					.col-xs-6
-						p= poPrice
-
-			if ddPrice
+					.col-xs-12
+						h3.title-2= name
+				
 				.row
-					.col-xs-6
-						p Dedicated Desk
-					.col-xs-6
-						p= ddPrice
+					.col-xs-12
+						p.copy-3= address
+						hr
 
-			if hdPrice
-				.row
-					.col-xs-6
-						p Hot desk
-					.col-xs-6
-						p= hdPrice
+				if poPrice
+					.row
+						.col-xs-6
+							p.copy-4 Private Office
+						.col-xs-6.text-right
+							p.copy-4= poPrice
+
+				if ddPrice
+					.row
+						.col-xs-6
+							p.copy-4 Dedicated Desk
+						.col-xs-6.text-right
+							p.copy-4= ddPrice
+
+				if hdPrice
+					.row
+						.col-xs-6
+							p.copy-4 Hot desk
+						.col-xs-6.text-right
+							p.copy-4= hdPrice
+
+				if presale
+					.row
+						.col-xs-12
+							p.copy-4 Move in ahead of the curve with special pre-opening rates.
 
 			.row
 				.col-xs-12

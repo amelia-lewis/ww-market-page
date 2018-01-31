@@ -1,0 +1,343 @@
+// ---------------
+// Fonts
+// ---------------
+
+@font-face {
+	font-family: "Knockout 48 A";
+	src: url("../assets/fonts/Knockout-HTF48-Featherweight.otf");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "apercu";
+	src: url("../assets/fonts/apercu_light.eot");
+	src: url("../assets/fonts/apercu_light.eot?#iefix") format("embedded-opentype"),
+	url("../assets/fonts/apercu_light.woff2") format("woff2"),
+	url("../assets/fonts/apercu_light.woff") format("woff"),
+	url("../assets/fonts/apercu_light.ttf") format("truetype"),
+	url("../assets/fonts/apercu_light.svg#aperculight") format("svg");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "apercu";
+	src: url("../assets/fonts/apercu_medium.eot");
+	src: url("../assets/fonts/apercu_medium.eot?#iefix") format("embedded-opentype"),
+	url("../assets/fonts/apercu_medium.woff2") format("woff2"),
+	url("../assets/fonts/apercu_medium.woff") format("woff"),
+	url("../assets/fonts/apercu_medium.ttf") format("truetype"),
+	url("../assets/fonts/apercu_medium.svg#apercumedium") format("svg");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "apercu";
+	src: url("../assets/fonts/apercu_bold.eot");
+	src: url("../assets/fonts/apercu_bold.eot?#iefix") format("embedded-opentype"),
+	url("../assets/fonts/apercu_bold.woff2") format("woff2"),
+	url("../assets/fonts/apercu_bold.woff") format("woff"),
+	url("../assets/fonts/apercu_bold.ttf") format("truetype"),
+	url("../assets/fonts/apercu_bold.svg#apercubold") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+
+$knockout: "Knockout 48 A", "Knockout 48 B", "Helvetica", "Arial", sans-serif;
+$apercu: "apercu", "Helvetica", "Arial", sans-serif;
+
+
+// ---------------
+// Weights
+// ---------------
+
+.text-light {
+	font-weight: 200;
+}
+
+.text-medium {
+	font-weight: 600;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+
+// ---------------
+// Alignment
+// ---------------
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-tight {
+	margin: 0;
+}
+
+
+// ------------------------------------------------------------------------------------------
+
+
+// ---------------
+// Links
+// ---------------
+
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+// ---------------
+// Impact
+// ---------------
+
+.impact-1 {
+	font-family: $knockout;
+	@extend .text-light;
+	font-size: 60px;
+	line-height: 50px;
+	letter-spacing: 1px;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 120px;
+		line-height: 100px;
+		letter-spacing: 2px;
+		margin: 0 0 20px;
+	}
+}
+
+.impact-2 {
+	font-family: $knockout;
+	@extend .text-light;
+	font-size: 50px;
+	line-height: 44px;
+	letter-spacing: 1px;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 80px;
+		line-height: 70px;
+		letter-spacing: 2px;
+		margin: 0 0 20px;
+	}
+}
+
+
+// ---------------
+// Titles
+// ---------------
+
+.title-0 {
+	@extend .text-bold;
+	font-size: 28px;
+	line-height: 36px;
+	margin: 0 0 10px;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 54px;
+		line-height: 62px;
+		margin: 0 0 20px;
+	}
+}
+
+.title-1 {
+	@extend .text-bold;
+	font-size: 24px;
+	line-height: 32px;
+	margin: 0 0 10px;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 34px;
+		line-height: 42px;
+	}
+}
+
+.title-2 {
+	@extend .text-bold;
+	font-size: 18px;
+	line-height: 26px;
+	margin: 10px 0 5px;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 24px;
+		line-height: 32px;
+		margin: 0 0 10px;
+	}
+}
+
+.title-3 {
+	@extend .text-bold;
+	font-size: 16px;
+	line-height: 26px;
+	margin: 0 0 5px;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+
+.title-4 {
+	@extend .text-bold;
+	font-size: 14px;
+	line-height: 22px; 
+	margin: 0 0 5px;
+}
+
+
+// ---------------
+// Copy
+// ---------------
+
+.copy-1 {
+	@extend .text-light;
+	font-size: 20px;
+	line-height: 32px; 
+	margin: 0 0 15px;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 24px;
+		line-height: 36px;
+		margin: 0 0 20px;
+	}
+}
+
+.copy-2 {
+	@extend .text-light;
+	font-size: 16px;
+	line-height: 26px; 
+	margin: 0 0 15px;
+
+	@media (min-width: $screen-md-min) {
+		font-size: 18px;
+		line-height: 28px; 
+		margin: 0 0 20px;
+	}
+}
+
+.copy-3 {
+	@extend .text-light;
+	font-size: 14px;
+	line-height: 22px;
+	margin: 0;
+}
+
+.copy-4 {
+	@extend .text-light;
+	font-size: 12px;
+	line-height: 20px;
+	margin: 0;
+}
+
+.copy-1,
+.copy-2,
+.copy-3,
+// .copy-4,
+.bulleted-list li,
+.bulleted-link-list li {
+	strong {
+		@extend .text-medium;
+	}
+
+	a {
+		@extend .text-medium;
+		color: $blue-50;
+		border-bottom: 1px solid transparent;
+
+		&:hover {
+			border-color: $blue-50;
+		}
+	}
+}
+
+
+// ---------------
+// Lists
+// ---------------
+
+ul.bulleted-list {
+	list-style: none;
+	padding: 0 0 15px;
+
+	li {
+		@extend .copy-2;
+		padding: 0 0 5px 20px;
+		margin: 0;
+
+		&:before {
+			content: "";
+			display: block;
+			position: relative;
+			left: -20px;
+			top: 16px;
+			width: 8px;
+			height: 8px;
+			transform: rotate(-45deg);
+			background-color: $yellow-50;
+		}
+	}
+
+	&.bulleted-link-list {
+		li:before {
+			background-color: $blue-50;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		padding: 0 0 20px;
+
+		li {
+			padding: 0 0 5px 30px;
+
+			&:before {
+				left: -30px;
+				top: 18px;
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+}
+
+
+// ---------------
+// Blockquote
+// ---------------
+figure {
+	margin: 0;
+}
+
+blockquote,
+blockquote + figcaption {
+	padding: 0 0 0 20px;
+	margin: 0;
+	border-left: 5px solid $bg-5;
+
+	p {
+		@extend .title-2;
+		margin: 0;
+		padding-bottom: 10px;
+	}
+
+	cite {
+		@extend .copy-3;
+		font-style: normal;
+	}
+}

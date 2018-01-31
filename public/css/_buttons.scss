@@ -4,8 +4,8 @@ button,
 	height: 42px;
 	font-size: 14px;
 	line-height: 42px;
-	// font-family: $apercu;
-	// @extend .text-medium;
+	font-family: $apercu;
+	@extend .text-medium;
 	text-align: center;
 	position: relative;
 	cursor: pointer;

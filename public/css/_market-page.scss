@@ -1,0 +1,41 @@
+// ---------------
+// Market Page
+// ---------------
+
+// Intro
+.market-page-intro {
+	@extend .responsive-block;
+	text-align: center;
+
+	p {
+		margin: 0;
+	}
+}
+
+// Filter Bar
+.filter-bar {
+	background: $bg-3;
+	padding: $spacer-xs 0;
+	text-align: center;
+	width: calc(100% + 400px);
+	margin: 0 0 0 -200px;
+}
+
+// Results Bar
+.results-bar {
+	padding: $spacer-md 0 $spacer-xs;
+}
+
+// Map
+.map {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: calc(100vh - 164px);
+	background: $bg-3;
+
+	h3 {
+		transform: rotate(-10deg);
+	}
+}
