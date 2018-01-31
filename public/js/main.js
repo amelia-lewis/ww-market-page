@@ -3,6 +3,7 @@ var filterBarSpacer = $(".filter-bar-spacer");
 var filterBtn = $("#btn-market-filters");
 var filterBtnClose = $("#btn-market-filters-close");
 var filters = $(".market-filters");
+var map = $(".map");
 
 $(window).on("scroll", function(e) {
   if ($(window).scrollTop() > 446) {
@@ -11,6 +12,14 @@ $(window).on("scroll", function(e) {
   } else {
     filterBar.removeClass("fixed");
     filterBarSpacer.hide();
+  }
+});
+
+$(window).on("scroll", function(e) {
+  if ($(window).scrollTop() > 446) {
+    map.addClass("fixed");
+  } else {
+    map.removeClass("fixed");
   }
 });
 

@@ -45,8 +45,14 @@
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: calc(100vh - 164px);
+	max-width: 392px;
+	height: calc(100vh - 98px);
 	background: $bg-3;
+
+	&.fixed {
+		position: fixed;
+		top: 98px;
+	}
 
 	h3 {
 		transform: rotate(-10deg);
