@@ -14,11 +14,24 @@
 
 // Filter Bar
 .filter-bar {
-	background: $bg-3;
+	background: $gray-30;
 	padding: $spacer-xs 0;
 	text-align: center;
-	width: calc(100% + 400px);
-	margin: 0 0 0 -200px;
+
+	&.fixed {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		z-index: 100;
+	}
+}
+
+// to replace the space when the filter bar is stuck to the top
+.filter-bar-spacer {
+	display: none;
+	height: 82px;
 }
 
 // Results Bar

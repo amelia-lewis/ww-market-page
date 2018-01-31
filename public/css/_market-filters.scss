@@ -1,0 +1,25 @@
+// ---------------
+// Market Filters
+// ---------------
+
+.market-filters {
+	display: none;
+	background: $gray-30;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-width: 1600px;
+	min-height: 100vh;
+	z-index: 110;
+
+	&.show {
+		display: block;
+	}
+
+	#btn-market-filters-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+	}
+}

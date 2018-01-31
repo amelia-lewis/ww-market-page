@@ -1,0 +1,58 @@
+.market-filters
+	i.bi_interface-cross#btn-market-filters-close
+	
+	.content-wrap
+		.responsive-block
+			.row
+				.col-xs-12
+					label What areas are you interested in?
+						label.label--radio-checkbox(for='area-borough-manhattan') Manhattan
+							input#area-borough-manhattan(type='checkbox', name='area-borough', value='manhattan')
+						label.label--radio-checkbox(for='area-borough-brooklyn') Brooklyn
+							input#area-borough-brooklyn(type='checkbox', name='area-borough', value='brooklyn')
+						label.label--radio-checkbox(for='area-borough-queens') Queens
+							input#area-borough-queens(type='checkbox', name='area-borough', value='queens')
+						
+						label.label--radio-checkbox(for='area-neighborhood-midtown-west') Midtown West
+							input#area-neighborhood-midtown-west(type='checkbox', name='area-neighborhood', value='midtown-west')
+						label.label--radio-checkbox(for='area-neighborhood-midtown-east') Midtown East
+							input#area-neighborhood-midtown-east(type='checkbox', name='area-neighborhood', value='midtown-east')
+						label.label--radio-checkbox(for='area-neighborhood-tribeca') TriBeCa
+							input#area-neighborhood-tribeca(type='checkbox', name='area-neighborhood', value='tribeca')
+						label.label--radio-checkbox(for='area-neighborhood-flatiron-district') Flatiron District
+							input#area-neighborhood-flatiron-district(type='checkbox', name='area-neighborhood', value='flatiron-district')
+						label.label--radio-checkbox(for='area-neighborhood-soho') SoHo
+							input#area-neighborhood-soho(type='checkbox', name='area-neighborhood', value='soho')
+
+			.row
+				.col-xs-12
+					label(for="name") How many desks do you need?
+						input(type="text" id="name" name="name" placeholder="Your full name")
+
+			.row
+				.col-xs-12
+					label When would you like to move in?
+						label.label--radio-checkbox(for='when-undecided') Undecided
+							input#when-undecided(type='radio', name='when', value='undecided')
+						label.label--radio-checkbox(for='when-february') February
+							input#when-february(type='radio', name='when', value='february')
+						label.label--radio-checkbox(for='when-march') March
+							input#when-march(type='radio', name='when', value='march')
+						label.label--radio-checkbox(for='when-april') April
+							input#when-april(type='radio', name='when', value='april')
+
+			.row
+				.col-xs-12
+					label What type of space do you need?
+						label.label--radio-checkbox(for='type-hot-desk') Hot Desk
+							input#type-hot-desk(type='radio', name='type', value='hot-desk')
+						label.label--radio-checkbox(for='type-dedicated-desk') Dedicated Desk
+							input#type-dedicated-desk(type='radio', name='type', value='dedicated-desk')
+						label.label--radio-checkbox(for='type-private-office') Private Office
+							input#type-private-office(type='radio', name='type', value='private-office')
+						label.label--radio-checkbox(for='type-custom-build') Custom Build
+							input#type-custom-build(type='radio', name='type', value='custom-build')
+
+			.row
+				.col-xs-12
+					a.btn.btn--primary-action See Results
