@@ -3,7 +3,6 @@
 // ---------------
 
 .market-filters {
-	display: none;
 	background: $gray-30;
 	position: fixed;
 	top: 0;
@@ -11,15 +10,33 @@
 	max-width: 1600px;
 	min-height: 100vh;
 	z-index: 110;
+	opacity: 0;
+	transition: all 500ms;
+	pointer-events: none;
 
-	&.show {
-		display: block;
+	.content-wrap {
+		opacity: 0;
+		transform: translate(0, -1 * $spacer-md);
+		transition: all 500ms;
 	}
 
-	#btn-market-filters-close {
+	&.show {
+		opacity: 1;
+		transform: translate(0, 0);
+		pointer-events: all;
+
+		.content-wrap {
+			opacity: 1;
+			transform: translate(0, 0);
+			transition-delay: 300ms;
+		}
+	}
+
+	.btn-market-filters-close {
 		position: absolute;
 		top: 20px;
 		right: 20px;
 		cursor: pointer;
+		z-index: 120;
 	}
 }

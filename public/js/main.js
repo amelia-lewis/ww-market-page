@@ -1,12 +1,15 @@
+var header = $("header");
+var marketPageIntro = $(".market-page-intro");
 var filterBar = $(".filter-bar");
 var filterBarSpacer = $(".filter-bar-spacer");
+var resultsBar = $(".results-bar");
 var filterBtn = $("#btn-market-filters");
-var filterBtnClose = $("#btn-market-filters-close");
+var filterBtnClose = $(".btn-market-filters-close");
 var filters = $(".market-filters");
 var map = $(".map");
 
 $(window).on("scroll", function(e) {
-  if ($(window).scrollTop() > 446) {
+  if ($(window).scrollTop() > ($(header).outerHeight() + $(marketPageIntro).outerHeight())) {
     filterBar.addClass("fixed");
     filterBarSpacer.show();
   } else {
@@ -16,7 +19,7 @@ $(window).on("scroll", function(e) {
 });
 
 $(window).on("scroll", function(e) {
-  if ($(window).scrollTop() > 528) {
+  if ($(window).scrollTop() > ($(header).outerHeight() + $(marketPageIntro).outerHeight() + $(resultsBar).outerHeight() - 16) && $(window).width() > 1024) {
     map.addClass("fixed");
   } else {
     map.removeClass("fixed");

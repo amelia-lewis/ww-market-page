@@ -21,7 +21,7 @@
 	&.fixed {
 		position: fixed;
 		top: 0;
-		width: 100%;
+		width: calc(100vw - 40px);
 		max-width: 1200px;
 		margin: 0 auto;
 		z-index: 100;
@@ -44,8 +44,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	max-width: 392px;
+	width: calc((100vw - 40px - 32px) / 3);
+	max-width: 390px;
 	height: calc(100vh - 98px);
 	background: $bg-3;
 
