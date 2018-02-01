@@ -11,7 +11,12 @@ include ../partials/market-filters
 	.row
 		.col-xs-12
 			.filter-bar
-				a.btn.btn--primary-navigation#btn-market-filters Filter Locations
+				a.btn.btn--primary-action#btn-market-filters Filter Locations
+				.toggle-group
+					label.label--toggle(for='list-view') List
+						input#list-view(type='radio', name='toggle-view', value='list', checked)
+					label.label--toggle(for='map-view') Map
+						input#map-view(type='radio', name='toggle-view', value='map')
 			.filter-bar-spacer
 
 	.row
