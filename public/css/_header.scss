@@ -17,9 +17,24 @@ header {
 		flex-direction: row;
 	}
 
+	.header-rhs {
+		button {
+			display: none;
+		}
+
+		@media (min-width: $screen-md-min) {
+			button {
+				display: inline-block;
+			}
+			
+			i {
+				display: none;
+			}
+		}
+	}
+
 	.header-nav {
-		display: flex;
-		flex-direction: row;
+		display: none;
 		list-style: none;
 		margin: 4px 0 0 30px;
 		padding: 0;
@@ -48,6 +63,11 @@ header {
 					transform: scale(1, 1);
 				}
 			}
+		}
+
+		@media (min-width: $screen-md-min) {
+			display: flex;
+			flex-direction: row;
 		}
 	}
 }

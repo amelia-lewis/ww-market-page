@@ -16,7 +16,7 @@ $(window).on("scroll", function(e) {
 });
 
 $(window).on("scroll", function(e) {
-  if ($(window).scrollTop() > 446) {
+  if ($(window).scrollTop() > 528) {
     map.addClass("fixed");
   } else {
     map.removeClass("fixed");
