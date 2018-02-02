@@ -7,6 +7,10 @@ var filterBtn = $("#btn-market-filters");
 var filterBtnClose = $(".btn-market-filters-close");
 var filters = $(".market-filters");
 var map = $(".map");
+var toggleListView = $("#list-view");
+var toggleMapView = $("#map-view");
+var marketBuildingContainer = $(".market-building-container");
+var marketMapContainer = $(".market-map-container");
 
 $(window).on("scroll", function(e) {
   if ($(window).scrollTop() > ($(header).outerHeight() + $(marketPageIntro).outerHeight())) {
@@ -32,4 +36,18 @@ filterBtn.on("click", function(e) {
 
 filterBtnClose.on("click", function(e) {
   filters.removeClass("show");
+});
+
+toggleMapView.on("click", function(e) {
+  if ($(window).width() < 1024) {
+    marketBuildingContainer.hide();
+    marketMapContainer.show();
+  }
+});
+
+toggleListView.on("click", function(e) {
+  if ($(window).width() < 1024) {
+    marketBuildingContainer.show();
+    marketMapContainer.hide();
+  }
 });

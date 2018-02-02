@@ -60,10 +60,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: calc((100vw - 40px - 32px) / 3);
-	max-width: 390px;
+	width: calc((100vw - 40px));
 	height: calc(100vh - 98px);
 	background: $bg-3;
+
+	@media (min-width: $screen-md-min) {
+		width: calc((100vw - 40px - 32px) / 3);
+		max-width: 390px;
+	}
 
 	&.fixed {
 		position: fixed;
@@ -72,5 +76,12 @@
 
 	h3 {
 		transform: rotate(-10deg);
+	}
+}
+
+.market-building-container,
+.market-map-container {
+	@media (min-width: $screen-md-min) {
+		display: flex !important;
 	}
 }
