@@ -14,7 +14,7 @@
 
 // Filter Bar
 .filter-bar {
-	background: $gray-30;
+	background: $bg-3-solid;
 	padding: $spacer-xs 0;
 	display: flex;
 	flex-direction: row;
@@ -82,6 +82,6 @@
 .market-building-container,
 .market-map-container {
 	@media (min-width: $screen-md-min) {
-		display: flex !important;
+		display: block !important;
 	}
 }
