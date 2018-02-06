@@ -31,7 +31,15 @@
 
 	.btn {
 		padding: 0 20px;
+	}
+
+	.btn-market-filters {
 		margin: 0 10px 0 0;
+	}
+
+	.btn-market-filters-clear {
+		margin: 0;
+		display: none;
 	}
 
 	.toggle-group {
@@ -83,5 +91,13 @@
 .market-map-container {
 	@media (min-width: $screen-md-min) {
 		display: block !important;
+	}
+}
+
+.market-building-container {
+	&.filtered {
+		.col-xs-12.col-sm-6:nth-of-type(n+4) {
+			display: none;
+		}
 	}
 }

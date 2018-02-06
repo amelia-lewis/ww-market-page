@@ -3,8 +3,9 @@ var marketPageIntro = $(".market-page-intro");
 var filterBar = $(".filter-bar");
 var filterBarSpacer = $(".filter-bar-spacer");
 var resultsBar = $(".results-bar");
-var filterBtn = $("#btn-market-filters");
+var filterBtn = $(".btn-market-filters");
 var filterBtnClose = $(".btn-market-filters-close");
+var filterBtnClear = $(".btn-market-filters-clear");
 var filters = $(".market-filters");
 var map = $(".map");
 var toggleListView = $("#list-view");
@@ -30,20 +31,55 @@ $(window).on("scroll", function(e) {
 	}
 });
 
+$("input:checkbox").change(function(){
+	if($(this).is(":checked")) {
+		$(this).parent().addClass("selected"); 
+	} else {
+		$(this).parent().removeClass("selected")
+	}
+ });
+
+$("input:radio").change(function(){
+	if($(this).is(":checked")) {
+		$(this).parent().addClass('selected'); 
+		$(this).parent().siblings().removeClass("selected"); 
+	} else {
+		$(this).parent().removeClass("selected")
+	}
+ });
+
 filterBtn.on("click", function(e) {
 	filters.addClass("show");
-		$('html, body').css({
-			overflow: 'hidden',
-			height: '100%'
-		});
+	$("html, body").css({overflow: "hidden"});
 });
 
 filterBtnClose.on("click", function(e) {
 	filters.removeClass("show");
-	$('html, body').css({
-		overflow: 'auto',
-		height: 'auto'
-	});
+	$("html, body").css({overflow: "auto"});
+
+	if($("input:radio").parent().hasClass("selected") || $("input:checkbox").parent().hasClass("selected")) {
+		marketBuildingContainer.addClass("filtered");
+		filterBtnClear.show();
+		$(".results-bar p").text("Viewing 3 of 49 Locations in New York City");
+	}
+});
+
+filterBtnClear.on("click", function(e) {
+	marketBuildingContainer.removeClass("filtered");
+	filterBtnClear.hide();
+	$('input:radio').prop('checked', false);
+	$('input:checkbox').prop('checked', false);
+	$("input:radio").parent().removeClass("selected");
+	$("input:checkbox").parent().removeClass("selected");
+	$(".results-bar p").text("Viewing 49 of 49 Locations in New York City");
+});
+
+$(document).keydown(function(e){
+	if(e.keyCode == 27) {
+		if (filters.hasClass('show')) {
+			filters.removeClass('show');
+		}
+	}
 });
 
 toggleMapView.on("click", function(e) {
@@ -60,19 +96,3 @@ toggleListView.on("click", function(e) {
 	}
 });
 
-$('input:checkbox').change(function(){
-	if($(this).is(':checked')) {
-		$(this).parent().addClass('selected'); 
-	} else {
-		$(this).parent().removeClass('selected')
-	}
- });
-
-$('input:radio').change(function(){
-	if($(this).is(':checked')) {
-		$(this).parent().addClass('selected'); 
-		$(this).parent().siblings().removeClass('selected'); 
-	} else {
-		$(this).parent().removeClass('selected')
-	}
- });

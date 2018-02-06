@@ -3,6 +3,7 @@
 // ---------------
 
 .market-filters {
+	display: flex;
 	background: $bg-3-solid;
 	position: fixed;
 	top: 0;
@@ -14,6 +15,11 @@
 	transition: all 500ms;
 	pointer-events: none;
 	overflow-y: scroll;
+
+	@media (min-width: $screen-md-min) {
+		justify-content: center;
+		align-items: center;
+	}
 
 	.content-wrap {
 		opacity: 0;
@@ -50,6 +56,10 @@
 		margin: 0 auto 20px;
 	}
 
+	input[type="number"]:focus {
+		border-color: $blue-50;
+	}
+
 	// Filter Option (Multi)
 	.label--filter-option-multi-group {
 		display: flex;
@@ -69,6 +79,7 @@
 			height: 24px;
 			line-height: 24px;
 			border-radius: 12px;
+			transition: all 400ms;
 
 			&:not(:last-of-type) {
 				margin-right: 5px;
@@ -93,6 +104,7 @@
 					border: 1px solid $gray-40;
 					border-radius: 12px;
 					z-index: -1;
+					transition: all 400ms;
 				}
 
 				&:after {
@@ -107,6 +119,7 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
+					transition: all 400ms;
 				}
 				
 				&:checked:before {
