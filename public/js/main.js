@@ -57,6 +57,7 @@ $("input:radio").change(function(){
 filterBtn.on("click", function(e) {
 	filters.addClass("show");
 	$("html, body").css({overflow: "hidden"});
+	tooltip.removeClass("show");
 });
 
 filterBtnClose.on("click", function(e) {
@@ -66,7 +67,7 @@ filterBtnClose.on("click", function(e) {
 	if($("input:radio").parent().hasClass("selected") || $("input:checkbox").parent().hasClass("selected") || $("#desk-number").val()) {
 		marketBuildingContainer.addClass("filtered");
 		filterBtnClear.show();
-		$(".results-bar p").text("Viewing 3 of 49 Locations in New York City");
+		$(".results-bar p").text("Viewing 6 of 49 Locations in New York City");
 	}
 
 	if($("input:radio").parent().hasClass("selected")) {
