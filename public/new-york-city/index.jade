@@ -3,23 +3,39 @@ include ../partials/market-filters
 
 .content-wrap
 	.row
-		.col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+		.col-xs-12
 			.market-page-intro
-				h1.impact-2 Find Inspiring Workspace in New York City
-				p.copy-2 From a single desk to private offices, we offer fresh spaces that will keep your team energized. Explore our New York City locations here.
+				//- h1.impact-2 Find Inspiring Workspace in New York City
+				//- p.copy-2 From a single desk to private offices, we offer fresh spaces that will keep your team energized. Explore our New York City locations here.
 
 	.row
 		.col-xs-12
 			.filter-bar
-				a.btn.btn--primary-navigation.btn-market-filters
-					i.bi_setting-eq-a
-					|  Filter Locations
-				a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Selections
+				h1.impact-2 Inspiring Workspace in New York City
+				.tooltip-wrapper
+					a.btn.btn--primary-navigation.btn-market-filters
+						i.bi_setting-eq-a
+						|  Filter Locations
+					.tooltip
+						| Our filters can help you refine your workspace results.
+						i.bi_interface-cross
 				.toggle-group
 					label.label--toggle(for='list-view') List
 						input#list-view(type='radio', name='toggle-view', value='list', checked)
 					label.label--toggle(for='map-view') Map
 						input#map-view(type='radio', name='toggle-view', value='map')
+				ul.filter-results
+					li.area-result
+						span
+						|  areas
+					li.desks-result
+						span
+						|  desks
+					li.move-in-result
+						span
+						|  move-in
+				a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Filters
+
 			.filter-bar-spacer
 
 	.row
@@ -33,7 +49,7 @@ include ../partials/market-filters
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/66df64ee-9330-11e7-b00b-0a636a339cd2/6._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "575 Fifth", "575 5th Ave. New York NY 10017", "$1,000", "$700", "$450", "/", "", false)
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/233613a4-b03c-11e7-9412-0a636a339cd2/20170117_Long_Beach_-_Members-12.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "135 Madison", "135 Madison Ave New York NY 10016", "$970", "", "", "/", "Opening Soon", false)
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/246c8e78-f0c5-11e7-b01d-1202be33576a/Metropool_by_Brigitte_Kroone-Common_Area-8__1_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "11 Park Place", "11 Park Place New York NY 10007", "$980", "", "", "/", "Opening Soon", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/233613a4-b03c-11e7-9412-0a636a339cd2/20170117_Long_Beach_-_Members-12.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "Queens Plaza", "27-01 Queens Plaza N Long Island City NY 10011", "", "", "", "/", "", true)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/a5985f54-7bae-11e7-a0ad-0a636a339cd2/20170526_Merchant_s_Row_-_Common_Areas-49.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "Queens Plaza", "27-01 Queens Plaza N Long Island City NY 10011", "", "", "", "/", "", true)
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/cae18020-f0bf-11e7-a24a-1202be33576a/29171214_135_West_41st_Common_Area_11_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "135 West 41st St.", "135 West 41st St 5th Floor New York NY 10036", "$900", "", "$450", "/", "", false)
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/7591f35c-d3c3-11e7-8c7f-0a636a339cd2/20171121_W_57th_Interiors_-_Common_Areas_--6.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "W. 57th St.", "142 W 57th St New York NY 10019", "$1,100", "", "$500", "/", "", false)
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/202949de-3800-11e6-8bc6-0a488af3e541/dumbo-heights-coworking-28.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "Dumbo Heights", "81 Prospect St Brooklyn NY 11201", "$710", "$450", "", "/", "", false)

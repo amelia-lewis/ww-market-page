@@ -4,21 +4,30 @@
 
 // Intro
 .market-page-intro {
-	@extend .responsive-block;
-	text-align: center;
+	width: 100%;
+	height: 350px;
+	background: $black-50 url('https://images.unsplash.com/photo-1483653364400-eedcfb9f1f88?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec11cca0550e84491e0ac9dbd6f8374c&auto=format&fit=crop&w=2250&q=80') no-repeat center;
+	background-size: cover;
+	display: none;
 
-	p {
-		margin: 0;
+	@media (min-width: $screen-md-min) {
+		display: block;
 	}
 }
 
 // Filter Bar
 .filter-bar {
 	background: $bg-3-solid;
-	padding: $spacer-xs 0;
+	padding: $spacer-xs;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	@media (min-width: $screen-md-min) {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
 
 	&.fixed {
 		position: fixed;
@@ -27,6 +36,19 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		z-index: 100;
+	}
+
+	h1 {
+		font-size: 34px;
+		line-height: 40px;
+		letter-spacing: 0.5px;
+		flex-basis: 100%;
+		flex-shrink: 0;
+
+		@media (min-width: $screen-md-min) {
+			flex-basis: auto;
+			margin: 0 20px 0 0;
+		}
 	}
 
 	.btn {
@@ -48,6 +70,28 @@
 
 		@media (min-width: $screen-md-min) {
 			display: none;
+		}
+	}
+
+	.filter-results {
+		display: flex;
+		list-style: none;
+		flex-direction: row;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: none;
+			background: $white;
+			border: 1px solid $gray-40;
+			@extend .copy-3;
+			height: 44px;
+			line-height: 44px;
+			padding: 0 15px;
+
+			&:not(:last-of-type) {
+				margin: 0 10px 0 0;
+			}
 		}
 	}
 }
@@ -96,7 +140,11 @@
 
 .market-building-container {
 	&.filtered {
-		.col-xs-12.col-sm-6:nth-of-type(n+4) {
+		.col-xs-12.col-sm-6:nth-of-type(odd) {
+			display: none;
+		}
+
+		.col-xs-12.col-sm-6:nth-of-type(n+7) {
 			display: none;
 		}
 	}

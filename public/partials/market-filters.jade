@@ -37,21 +37,24 @@
 						hr
 
 						.row
-							.col-xs-12.col-md-6.text-center
+							.col-xs-12.text-center
 								label(for="desk-number") How many desks do you need?
 									input(type="number" id="desk-number" name="desk-number" placeholder="Approximate number")
 
-							.col-xs-12.col-md-6.text-center
+						hr
+
+						.row
+							.col-xs-12.text-center
 								label When would you like to move in?
 									.label--filter-option-group.text-center
 										label.label--filter-option(for='when-undecided') Undecided
-											input#when-undecided(type='radio', name='when', value='undecided')
+											input#when-undecided(type='radio', name='when', value='Undecided')
 										label.label--filter-option(for='when-february') February
-											input#when-february(type='radio', name='when', value='february')
+											input#when-february(type='radio', name='when', value='February')
 										label.label--filter-option(for='when-march') March
-											input#when-march(type='radio', name='when', value='march')
+											input#when-march(type='radio', name='when', value='March')
 										label.label--filter-option(for='when-april') April
-											input#when-april(type='radio', name='when', value='april')
+											input#when-april(type='radio', name='when', value='April')
 
 						//- hr
 

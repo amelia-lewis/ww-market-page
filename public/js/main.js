@@ -12,11 +12,17 @@ var toggleListView = $("#list-view");
 var toggleMapView = $("#map-view");
 var marketBuildingContainer = $(".market-building-container");
 var marketMapContainer = $(".market-map-container");
+var tooltip = $(".tooltip");
+
+$(window).on("load", function(e) {
+	tooltip.addClass("show");
+});
 
 $(window).on("scroll", function(e) {
 	if ($(window).scrollTop() > ($(header).outerHeight() + $(marketPageIntro).outerHeight())) {
 		filterBar.addClass("fixed");
 		filterBarSpacer.show();
+		tooltip.removeClass("show");
 	} else {
 		filterBar.removeClass("fixed");
 		filterBarSpacer.hide();
@@ -57,10 +63,25 @@ filterBtnClose.on("click", function(e) {
 	filters.removeClass("show");
 	$("html, body").css({overflow: "auto"});
 
-	if($("input:radio").parent().hasClass("selected") || $("input:checkbox").parent().hasClass("selected")) {
+	if($("input:radio").parent().hasClass("selected") || $("input:checkbox").parent().hasClass("selected") || $("#desk-number").val()) {
 		marketBuildingContainer.addClass("filtered");
 		filterBtnClear.show();
 		$(".results-bar p").text("Viewing 3 of 49 Locations in New York City");
+	}
+
+	if($("input:radio").parent().hasClass("selected")) {
+		$(".move-in-result").show();
+		$(".move-in-result span").text($('input[name=when]:checked').val());
+	}
+
+	if($("input:checkbox").parent().hasClass("selected")) {
+		$(".area-result").show();
+		$(".area-result span").text($(':input[type="checkbox"]:checked').length);
+	}
+
+	if($("#desk-number").val()) {
+		$(".desks-result").show();
+		$(".desks-result span").text($('#desk-number').val());
 	}
 });
 
@@ -72,6 +93,10 @@ filterBtnClear.on("click", function(e) {
 	$("input:radio").parent().removeClass("selected");
 	$("input:checkbox").parent().removeClass("selected");
 	$(".results-bar p").text("Viewing 49 of 49 Locations in New York City");
+	$("#desk-number").val('');
+	$(".move-in-result").hide();
+	$(".area-result").hide();
+	$(".desks-result").hide();
 });
 
 $(document).keydown(function(e){
@@ -96,3 +121,6 @@ toggleListView.on("click", function(e) {
 	}
 });
 
+tooltip.on("click", function(e) {
+	tooltip.removeClass("show");
+});
