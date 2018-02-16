@@ -5,76 +5,74 @@
 		.responsive-block
 			.row
 				.col-xs-12.text-center
-					h2.impact-2 Find the Perfect Space
+					h2.title-1 Find the Perfect Space
 
 			form
 				.row
-					.col-xs-12.col-md-10.col-md-offset-1
+					.col-xs-12.col-md-8.col-md-offset-2
 						.row
-							.col-xs-12.text-center
+							.col-xs-12.col-md-6
 								label(for="desk-number") How many desks do you need?
 									input(type="number" id="desk-number" name="desk-number" placeholder="Approximate number")
 
-						hr
-
-						.row
-							.col-xs-12.col-md-10.col-md-offset-1.text-center
-								label What areas are you interested in?
-									.label--filter-option-multi-group.text-center
-										label.label--filter-option-multi(for='area-neighborhood-manhattan-midtown-west') Midtown West
-											input#area-neighborhood-manhattan-midtown-west(type='checkbox', name='area-neighborhood-manhattan', value='midtown-west')
-										label.label--filter-option-multi(for='area-neighborhood-manhattan-midtown-east') Midtown East
-											input#area-neighborhood-manhattan-midtown-east(type='checkbox', name='area-neighborhood-manhattan', value='midtown-east')
-										label.label--filter-option-multi(for='area-neighborhood-manhattan-tribeca') TriBeCa
-											input#area-neighborhood-manhattan-tribeca(type='checkbox', name='area-neighborhood-manhattan', value='tribeca')
-										label.label--filter-option-multi(for='area-neighborhood-manhattan-flatiron-district') Flatiron District
-											input#area-neighborhood-manhattan-flatiron-district(type='checkbox', name='area-neighborhood-manhattan', value='flatiron-district')
-										label.label--filter-option-multi(for='area-neighborhood-manhattan-soho') SoHo
-											input#area-neighborhood-manhattan-soho(type='checkbox', name='area-neighborhood-manhattan', value='soho')
-										//- label.label--filter-option-multi(for='area-borough-manhattan') Manhattan
-										//- 	input#area-borough-manhattan(type='checkbox', name='area-borough', value='manhattan')
-										label.label--filter-option-multi(for='area-borough-brooklyn') Brooklyn
-											input#area-borough-brooklyn(type='checkbox', name='area-borough', value='brooklyn')
-										label.label--filter-option-multi(for='area-borough-queens') Queens
-											input#area-borough-queens(type='checkbox', name='area-borough', value='queens')
-
-										//- label.label--filter-option-multi(for='area-neighborhood-brooklyn-williamsburg') Williamsburg
-										//- 	input#area-neighborhood-brooklyn-williamsburg(type='checkbox', name='area-neighborhood-brooklyn', value='williamsburg')
-
-										//- label.label--filter-option-multi(for='area-neighborhood-brooklyn-long-island-city') Long Island City
-										//- 	input#area-neighborhood-brooklyn-long-island-city(type='checkbox', name='area-neighborhood-brooklyn', value='long-island-city')
-
-						hr
-
-						.row
-							.col-xs-12.text-center
 								label When would you like to move in?
-									.label--filter-option-group.text-center
-										label.label--filter-option(for='when-asap') ASAP
-											input#when-asap(type='radio', name='when', value='ASAP')
-										label.label--filter-option(for='when-march') March
-											input#when-march(type='radio', name='when', value='March')
-										label.label--filter-option(for='when-april') April
-											input#when-april(type='radio', name='when', value='April')
-										label.label--filter-option(for='when-3months') 3+ months from now
-											input#when-3months(type='radio', name='when', value='3+ months from now')
-										label.label--filter-option(for='when-undecided') Undecided
-											input#when-undecided(type='radio', name='when', value='Undecided')
+									label.label--radio-checkbox(for='when-asap') ASAP
+										input#when-asap(type='radio', name='when', value='ASAP')
+									label.label--radio-checkbox(for='when-march') March
+										input#when-march(type='radio', name='when', value='March')
+									label.label--radio-checkbox(for='when-april') April
+										input#when-april(type='radio', name='when', value='April')
+									label.label--radio-checkbox(for='when-3months') 3+ months from now
+										input#when-3months(type='radio', name='when', value='3+ months from now')
+									label.label--radio-checkbox(for='when-undecided') Undecided
+										input#when-undecided(type='radio', name='when', value='Undecided')
 
-						//- hr
 
-						//- .row
-						//- 	.col-xs-12.text-center
-						//- 		label What type of space do you need?
-						//- 			.label--filter-option-group.text-center
-						//- 				label.label--filter-option(for='type-hot-desk') Hot Desk
-						//- 					input#type-hot-desk(type='radio', name='type', value='hot-desk')
-						//- 				label.label--filter-option(for='type-dedicated-desk') Dedicated Desk
-						//- 					input#type-dedicated-desk(type='radio', name='type', value='dedicated-desk')
-						//- 				label.label--filter-option(for='type-private-office') Private Office
-						//- 					input#type-private-office(type='radio', name='type', value='private-office')
-						//- 				label.label--filter-option(for='type-custom-build') Custom Build
-						//- 					input#type-custom-build(type='radio', name='type', value='custom-build')
+							.col-xs-12.col-md-6
+								label What areas are you interested in?
+									.row
+										.col-xs-6
+											label.label--radio-checkbox(for='area-borough-manhattan') Manhattan
+												input#area-borough-manhattan(type='checkbox', name='area-borough', value='manhattan')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-midtown-west') Midtown West
+													input#area-neighborhood-manhattan-midtown-west(type='checkbox', name='area-neighborhood-manhattan', value='midtown-west')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-midtown-east') Midtown East
+													input#area-neighborhood-manhattan-midtown-east(type='checkbox', name='area-neighborhood-manhattan', value='midtown-east')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-tribeca') TriBeCa
+													input#area-neighborhood-manhattan-tribeca(type='checkbox', name='area-neighborhood-manhattan', value='tribeca')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-flatiron-district') Flatiron District
+													input#area-neighborhood-manhattan-flatiron-district(type='checkbox', name='area-neighborhood-manhattan', value='flatiron-district')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-soho') SoHo
+													input#area-neighborhood-manhattan-soho(type='checkbox', name='area-neighborhood-manhattan', value='soho')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-financial-district') Financial District
+													input#area-neighborhood-manhattan-financial-district(type='checkbox', name='area-neighborhood-manhattan', value='financial-district')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-meatpacking') Meatpacking
+													input#area-neighborhood-manhattan-meatpacking(type='checkbox', name='area-neighborhood-manhattan', value='meatpacking')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-harlem') Harlem
+													input#area-neighborhood-manhattan-harlem(type='checkbox', name='area-neighborhood-manhattan', value='harlem')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-grammercy') Grammercy
+													input#area-neighborhood-manhattan-grammercy(type='checkbox', name='area-neighborhood-manhattan', value='grammercy')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-nomad') NoMad
+													input#area-neighborhood-manhattan-nomad(type='checkbox', name='area-neighborhood-manhattan', value='nomad')
+												label.label--radio-checkbox(for='area-neighborhood-manhattan-chelsea') Chelsea
+													input#area-neighborhood-manhattan-chelsea(type='checkbox', name='area-neighborhood-manhattan', value='chelsea')
+
+										.col-xs-6
+											label.label--radio-checkbox(for='area-borough-brooklyn') Brooklyn
+												input#area-borough-brooklyn(type='checkbox', name='area-borough', value='brooklyn')
+												label.label--radio-checkbox(for='area-neighborhood-brooklyn-williamsburg') Williamsburg
+													input#area-neighborhood-brooklyn-williamsburg(type='checkbox', name='area-neighborhood-brooklyn', value='williamsburg')
+												label.label--radio-checkbox(for='area-neighborhood-brooklyn-dumbo') DUMBO
+													input#area-neighborhood-brooklyn-dumbo(type='checkbox', name='area-neighborhood-brooklyn', value='dumbo')
+												label.label--radio-checkbox(for='area-neighborhood-brooklyn-brooklyn-heights') Brooklyn Heights
+													input#area-neighborhood-brooklyn-brooklyn-heights(type='checkbox', name='area-neighborhood-brooklyn', value='brooklyn-heights')
+											
+											label.label--radio-checkbox(for='area-borough-queens') Queens
+												input#area-borough-queens(type='checkbox', name='area-borough', value='queens')
+												label.label--radio-checkbox(for='area-neighborhood-queens-long-island-city') Long Island City
+													input#area-neighborhood-queens-long-island-city(type='checkbox', name='area-neighborhood-queens', value='long-island-city')
+												label.label--radio-checkbox(for='area-neighborhood-queens-sunnyside-gardens') Sunnyside Gardens
+													input#area-neighborhood-queens-sunnyside-gardens(type='checkbox', name='area-neighborhood-brqueensoklyn', value='sunnyside-gardens')
 
 						hr
 
