@@ -2,15 +2,11 @@ include ../partials/building-card
 include ../partials/market-filters
 
 .content-wrap
-	.row
-		.col-xs-12
-			.market-page-intro
-				.text-container
-					.row
-						.col-xs-12
-							p.copy-2 Find inspiring workspace in
-							h1.impact-2 New York City
-				//- p.copy-2 From a single desk to private offices, we offer fresh spaces that will keep your team energized. Explore our New York City locations here.
+	.market-page-intro
+		.row
+			.col-xs-12
+				p.copy-2 Find inspiring workspace in
+				h1.impact-2 New York City
 
 	.row
 		.col-xs-12
@@ -29,23 +25,23 @@ include ../partials/market-filters
 					label.label--toggle(for='map-view') Map
 						input#map-view(type='radio', name='toggle-view', value='map')
 				ul.filter-results
-					li.area-result
-						span
-						|  areas
 					li.desks-result
 						span
 						|  desks
+					li.area-result
+						span
+						|  areas
 					li.move-in-result
 						span
 						|  move-in
-				//- a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Filters
+				a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Filters
 
 			.filter-bar-spacer
 
 	.row
 		.col-xs-12
 			.results-bar
-				p.copy-3 Viewing 49 of 49 Locations in New York City
+				p.copy-3 Viewing 49 of 49 locations in New York City
 
 	.row
 		.col-xs-12.col-md-8.market-building-container

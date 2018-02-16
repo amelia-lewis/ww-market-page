@@ -16,7 +16,7 @@
 	pointer-events: none;
 	overflow-y: scroll;
 
-	@media (min-width: $screen-md-min) {
+	@media (min-width: $screen-md-min) and (min-height: 800px) {
 		justify-content: center;
 		align-items: center;
 	}
@@ -158,22 +158,18 @@
 			position: relative;
 			@extend .text-light;
 			padding: 0 15px;
-			margin: 0 0 10px;
+			margin: 0 0 0 -1px;
 			height: 44px;
 			line-height: 44px;
 
-			&:not(:last-of-type) {
-				margin-right: 10px;
-			}
-
 			&.selected {
 				color: $blue-50;
+				z-index: 1;
 			}
 
 			input[type="radio"] {
 				width: 100%;
 				height: 100%;
-				border-radius: 2px;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -195,6 +191,14 @@
 				&:checked:before {
 					border-color: $blue-50;
 				}
+			}
+
+			&:first-of-type input[type="radio"] {
+				border-radius: 2px 0 0 2px;
+			}
+
+			&:last-of-type input[type="radio"] {
+				border-radius: 0 2px 2px 0;
 			}
 		}
 	}

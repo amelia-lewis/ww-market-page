@@ -6,22 +6,21 @@
 			.row
 				.col-xs-12.text-center
 					h2.impact-2 Find the Perfect Space
-					p.copy-2 Our filters can help you refine your workspace results.
 
 			form
 				.row
 					.col-xs-12.col-md-10.col-md-offset-1
 						.row
+							.col-xs-12.text-center
+								label(for="desk-number") How many desks do you need?
+									input(type="number" id="desk-number" name="desk-number" placeholder="Approximate number")
+
+						hr
+
+						.row
 							.col-xs-12.col-md-10.col-md-offset-1.text-center
 								label What areas are you interested in?
 									.label--filter-option-multi-group.text-center
-										label.label--filter-option-multi(for='area-borough-manhattan') Manhattan
-											input#area-borough-manhattan(type='checkbox', name='area-borough', value='manhattan')
-										label.label--filter-option-multi(for='area-borough-brooklyn') Brooklyn
-											input#area-borough-brooklyn(type='checkbox', name='area-borough', value='brooklyn')
-										label.label--filter-option-multi(for='area-borough-queens') Queens
-											input#area-borough-queens(type='checkbox', name='area-borough', value='queens')
-										
 										label.label--filter-option-multi(for='area-neighborhood-manhattan-midtown-west') Midtown West
 											input#area-neighborhood-manhattan-midtown-west(type='checkbox', name='area-neighborhood-manhattan', value='midtown-west')
 										label.label--filter-option-multi(for='area-neighborhood-manhattan-midtown-east') Midtown East
@@ -32,19 +31,18 @@
 											input#area-neighborhood-manhattan-flatiron-district(type='checkbox', name='area-neighborhood-manhattan', value='flatiron-district')
 										label.label--filter-option-multi(for='area-neighborhood-manhattan-soho') SoHo
 											input#area-neighborhood-manhattan-soho(type='checkbox', name='area-neighborhood-manhattan', value='soho')
+										//- label.label--filter-option-multi(for='area-borough-manhattan') Manhattan
+										//- 	input#area-borough-manhattan(type='checkbox', name='area-borough', value='manhattan')
+										label.label--filter-option-multi(for='area-borough-brooklyn') Brooklyn
+											input#area-borough-brooklyn(type='checkbox', name='area-borough', value='brooklyn')
+										label.label--filter-option-multi(for='area-borough-queens') Queens
+											input#area-borough-queens(type='checkbox', name='area-borough', value='queens')
 
-										label.label--filter-option-multi(for='area-neighborhood-brooklyn-williamsburg') Williamsburg
-											input#area-neighborhood-brooklyn-williamsburg(type='checkbox', name='area-neighborhood-brooklyn', value='williamsburg')
+										//- label.label--filter-option-multi(for='area-neighborhood-brooklyn-williamsburg') Williamsburg
+										//- 	input#area-neighborhood-brooklyn-williamsburg(type='checkbox', name='area-neighborhood-brooklyn', value='williamsburg')
 
-										label.label--filter-option-multi(for='area-neighborhood-brooklyn-long-island-city') Long Island City
-											input#area-neighborhood-brooklyn-long-island-city(type='checkbox', name='area-neighborhood-brooklyn', value='long-island-city')
-
-						hr
-
-						.row
-							.col-xs-12.text-center
-								label(for="desk-number") How many desks do you need?
-									input(type="number" id="desk-number" name="desk-number" placeholder="Approximate number")
+										//- label.label--filter-option-multi(for='area-neighborhood-brooklyn-long-island-city') Long Island City
+										//- 	input#area-neighborhood-brooklyn-long-island-city(type='checkbox', name='area-neighborhood-brooklyn', value='long-island-city')
 
 						hr
 
@@ -52,14 +50,16 @@
 							.col-xs-12.text-center
 								label When would you like to move in?
 									.label--filter-option-group.text-center
-										label.label--filter-option(for='when-undecided') Undecided
-											input#when-undecided(type='radio', name='when', value='Undecided')
-										label.label--filter-option(for='when-february') February
-											input#when-february(type='radio', name='when', value='February')
+										label.label--filter-option(for='when-asap') ASAP
+											input#when-asap(type='radio', name='when', value='ASAP')
 										label.label--filter-option(for='when-march') March
 											input#when-march(type='radio', name='when', value='March')
 										label.label--filter-option(for='when-april') April
 											input#when-april(type='radio', name='when', value='April')
+										label.label--filter-option(for='when-3months') 3+ months from now
+											input#when-3months(type='radio', name='when', value='3+ months from now')
+										label.label--filter-option(for='when-undecided') Undecided
+											input#when-undecided(type='radio', name='when', value='Undecided')
 
 						//- hr
 
