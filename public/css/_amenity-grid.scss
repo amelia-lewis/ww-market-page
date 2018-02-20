@@ -1,0 +1,50 @@
+// ---------------
+// Amenity Grid
+// ---------------
+
+.amenity-grid {
+	@extend .responsive-block;
+	
+	h2 {
+		@extend .title-1;
+	}
+
+	p {
+		@extend .copy-2;
+		margin: 0 0 $spacer-xs;
+
+		@media (min-width: $screen-sm-min) {
+			margin: 0 0 $spacer-sm;
+		}
+
+		@media (min-width: $screen-md-min) {
+			margin: 0 0 $spacer-md;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			margin: 0 0 $spacer-lg;
+		}
+	}
+
+	.amenity-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 0 0 20px;
+
+		i {
+			font-size: 32px;
+			margin: 0 0 10px;
+		}
+
+		p {
+			margin: 0;
+			text-align: center;
+		}
+
+		@media (min-width: $screen-md-min) {
+			margin: 0 0 30px;
+		}
+	}
+}

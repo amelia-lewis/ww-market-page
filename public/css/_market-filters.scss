@@ -14,7 +14,6 @@
 	opacity: 0;
 	transition: all 500ms;
 	pointer-events: none;
-	overflow-y: scroll;
 
 	@media (min-width: $screen-md-min) and (min-height: 800px) {
 		justify-content: center;
@@ -25,6 +24,7 @@
 		opacity: 0;
 		transform: translate(0, -1 * $spacer-md);
 		transition: all 500ms;
+		overflow-y: scroll;
 	}
 
 	&.show {
@@ -47,34 +47,34 @@
 		z-index: 120;
 	}
 
-	form {
-		margin: $spacer-xs 0 0;
+	// form {
+	// 	margin: $spacer-xs 0 0;
 
-		@media (min-width: $screen-sm-min) {
-			margin: $spacer-sm 0 0;
-		}
+	// 	@media (min-width: $screen-sm-min) {
+	// 		margin: $spacer-sm 0 0;
+	// 	}
 
-		@media (min-width: $screen-md-min) {
-			margin: $spacer-md 0 0;
-		}
+	// 	@media (min-width: $screen-md-min) {
+	// 		margin: $spacer-md 0 0;
+	// 	}
 
-		@media (min-width: $screen-lg-min) {
-			margin: $spacer-lg 0 0;
-		}
-	}
+	// 	@media (min-width: $screen-lg-min) {
+	// 		margin: $spacer-lg 0 0;
+	// 	}
+	// }
 
 	hr {
 		margin: 10px 0 30px;
 	}
 
-	label[for="desk-number"] {
-		max-width: 300px;
-		margin: 0 auto 20px 0;
-	}
+	// label[for="desk-number"] {
+	// 	max-width: 300px;
+	// 	margin: 0 auto 20px 0;
+	// }
 
-	input[type="number"]:focus {
-		border-color: $blue-50;
-	}
+	// input[type="number"]:focus {
+	// 	border-color: $blue-50;
+	// }
 
 	.label--radio-checkbox > label {
     padding-left: 20px;

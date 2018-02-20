@@ -76,7 +76,7 @@ filterBtnClose.on("click", function(e) {
 		$(".results-bar p").text("Viewing 6 of 49 locations in New York City");
 	}
 
-	if($("input:radio").parent().hasClass("selected")) {
+	if($("input:radio[name=when]").parent().hasClass("selected")) {
 		$(".move-in-result").show();
 		$(".move-in-result span").text($('input[name=when]:checked').val());
 	}
@@ -90,6 +90,29 @@ filterBtnClose.on("click", function(e) {
 		$(".desks-result").show();
 		$(".desks-result span").text($('#desk-number').val());
 	}
+
+	if($("input:radio[name=company-size]").parent().hasClass("selected")) {
+		$(".company-size-result").show();
+		$(".company-size-result span").text($('input[name=company-size]:checked').val());
+	}
+
+	if($('#desk-number').val() > 10 && $('#desk-number').val() < 99) {
+		$(".sales-callout-mid-market").show();
+		$(".sales-callout-custom-space").hide();
+		$(".sales-callout-enterprise").hide();
+	}
+
+	if($('#desk-number').val() > 100 && $('#desk-number').val() < 999) {
+		$(".sales-callout-mid-market").hide();
+		$(".sales-callout-custom-space").show();
+		$(".sales-callout-enterprise").hide();
+	}
+
+	if($('#desk-number').val() > 1000) {
+		$(".sales-callout-mid-market").hide();
+		$(".sales-callout-enterprise").show();
+		$(".sales-callout-custom-space").hide();
+	}
 });
 
 filterBtnClear.on("click", function(e) {
@@ -101,9 +124,13 @@ filterBtnClear.on("click", function(e) {
 	$("input:checkbox").parent().removeClass("selected");
 	$(".results-bar p").text("Viewing 49 of 49 locations in New York City");
 	$("#desk-number").val('');
+	$(".company-size-result").hide();
 	$(".move-in-result").hide();
 	$(".area-result").hide();
 	$(".desks-result").hide();
+	$(".sales-callout-mid-market").hide();
+	$(".sales-callout-enterprise").hide();
+	$(".sales-callout-custom-space").hide();
 });
 
 $(document).keydown(function(e){

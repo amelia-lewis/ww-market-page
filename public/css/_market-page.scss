@@ -119,6 +119,30 @@
 	padding: $spacer-md 0 $spacer-xs;
 }
 
+// Callouts
+.sales-callout {
+	display: none;
+	background: $black-50;
+	color: $white;
+	margin: 0 0 20px;
+
+	.image {
+		width: 100%;
+		height: 200px;
+		background: $gray-40 no-repeat center;
+		background-size: cover;
+	}
+
+	.text-container {
+		padding: $spacer-xs $spacer-xs 10px;
+	}
+}
+
+// Amenity Grid
+.amenity-grid .content-wrap {
+	width: 100%;
+}
+
 // Map
 .map {
 	display: flex;
