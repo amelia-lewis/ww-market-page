@@ -1,4 +1,4 @@
-mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, banner, presale)
+mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, btnLink, banner, presale)
 	.building-card
 		if banner
 			.banner= banner
@@ -62,4 +62,4 @@ mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, b
 
 			.row
 				.col-xs-12
-					a.btn.btn--primary-navigation View Building
+					a.btn.btn--primary-navigation(href=btnLink) View Building

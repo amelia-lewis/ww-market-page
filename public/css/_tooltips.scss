@@ -21,6 +21,7 @@
 	opacity: 0;
 	transition: all 400ms;
 	pointer-events: none;
+	display: none !important;
 
 	@media (min-width: $screen-md-min) {
 		white-space: nowrap;

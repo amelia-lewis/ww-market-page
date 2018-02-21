@@ -19,6 +19,14 @@ $(window).on("load", function(e) {
 	tooltip.addClass("show");
 	$(".switch-text-group .label--switch-text:first-of-type").addClass("selected");
 	filterBarSpacer.height(filterBar.outerHeight());
+
+	$(".area-result").show();
+	$(".area-result span").text('All');
+
+	$(".desks-result").show();
+	$(".desks-result span").text('1');
+
+	$('#desk-number').val('1');
 });
 
 // Sticky bar on scroll
@@ -121,6 +129,19 @@ filterBtnClose.on("click", function(e) {
 		$(".sales-callout-custom-space").hide();
 	}
 
+	if($('input:radio[name=company-size]:checked').val() == "100–999") {
+		$(".sales-callout-mid-market").hide();
+		$(".sales-callout-custom-space").show();
+		$(".sales-callout-enterprise").hide();
+		console.log("poop");
+	}
+
+	if($('input:radio[name=company-size]:checked').val() == "1000+") {
+		$(".sales-callout-mid-market").hide();
+		$(".sales-callout-custom-space").hide();
+		$(".sales-callout-enterprise").show();
+	}
+
 	$(".market-building-container").randomize(".col-xs-12.col-sm-6", ".building-card");
 });
 
@@ -141,6 +162,9 @@ filterBtnClear.on("click", function(e) {
 	$(".sales-callout-mid-market").hide();
 	$(".sales-callout-enterprise").hide();
 	$(".sales-callout-custom-space").hide();
+
+	$(".area-result").show();
+	$(".area-result span").text('All');
 });
 
 // Close filters with escape key
