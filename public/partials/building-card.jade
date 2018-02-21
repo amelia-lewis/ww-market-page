@@ -2,7 +2,19 @@ mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, b
 	.building-card
 		if banner
 			.banner= banner
+		
 		.image(style="background-image: url('" + img + "');")
+			.arrows
+				.arrow: i.bi_interface-left
+				.arrow: i.bi_interface-right
+
+			.pagination
+				.dot
+				.dot
+				.dot
+				.dot
+				.dot
+		
 		.text-container
 			.info
 				.row
