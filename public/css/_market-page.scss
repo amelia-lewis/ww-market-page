@@ -122,12 +122,12 @@
 // to replace the space when the filter bar is stuck to the top
 .filter-bar-spacer {
 	display: none;
-	height: 82px;
+	height: 85px;
 }
 
 // Results Bar
 .results-bar {
-	padding: $spacer-md 0 $spacer-xs;
+	padding: $spacer-lg 0 0;
 }
 
 // Callouts
@@ -135,7 +135,7 @@
 	display: none;
 	background: $black-50;
 	color: $white;
-	margin: 0 0 20px;
+	margin: 16px 0 0;
 
 	.image {
 		width: 100%;
@@ -150,8 +150,17 @@
 }
 
 // Amenity Grid
-.amenity-grid .content-wrap {
-	width: 100%;
+.amenity-grid {
+	display: none;
+	
+	.content-wrap {
+		width: 100%;
+	}
+}
+
+// More Options
+.more-options {
+	display: none;
 }
 
 // Map
@@ -160,18 +169,44 @@
 	align-items: center;
 	justify-content: center;
 	width: calc((100vw - 40px));
-	height: calc(100vh - 98px);
-	background: $bg-3 url('../assets/img/map.jpg') no-repeat center;
+	height: calc(100vh - 80px - 105px - 85px);
+	background: $bg-3 no-repeat left top;
 	background-size: cover;
+	cursor: pointer;
 
 	@media (min-width: $screen-md-min) {
 		width: calc((100vw - 40px - 32px) / 3);
 		max-width: 390px;
+		height: calc(100vh - 85px);
 	}
 
 	&.fixed {
 		position: fixed;
-		top: 98px;
+		top: 83px;
+	}
+
+	&.map-nyc {
+		background-image: url('../assets/img/Map_NYC.png');
+
+		&.show-card {
+			background-image: url('../assets/img/Map_NYC_Card.png');
+		}
+	}
+
+	&.map-sf {
+		background-image: url('../assets/img/Map_SF.png');
+
+		&.show-card {
+			background-image: url('../assets/img/Map_SF_Card.png');
+		}
+	}
+
+	&.map-la {
+		background-image: url('../assets/img/Map_LA.png');
+
+		&.show-card {
+			background-image: url('../assets/img/Map_LA_Card.png');
+		}
 	}
 }
 
@@ -184,12 +219,9 @@
 
 .market-building-container {
 	&.filtered {
-		.col-xs-12.col-sm-6:nth-of-type(odd) {
-			display: none;
-		}
-
-		.col-xs-12.col-sm-6:nth-of-type(n+13) {
-			display: none;
+		.amenity-grid,
+		.more-options {
+			display: block;
 		}
 	}
 }

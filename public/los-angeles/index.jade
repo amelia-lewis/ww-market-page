@@ -1,0 +1,117 @@
+include ../partials/building-card
+include ../partials/market-filters
+include ../partials/sales-callout
+include ../partials/amenity-grid
+
+.content-wrap
+	.market-page-intro
+		.row
+			.col-xs-12
+				p.copy-2 Find inspiring workspace in
+				h1.impact-2 Los Angeles
+
+	.row
+		.col-xs-12
+			.filter-bar
+				.tooltip-wrapper
+					a.btn.btn--primary-navigation.btn-market-filters
+						i.bi_setting-eq-a
+						|  Filter Locations
+					.tooltip
+						| Our filters can help you refine your workspace results.
+						i.bi_interface-cross
+				.switch-text-group
+					label.label--switch-text(for='list-view') List
+						input#list-view(type='radio', name='toggle-view', value='list', checked)
+					label.label--switch-text(for='map-view') Map
+						input#map-view(type='radio', name='toggle-view', value='map')
+				ul.filter-results
+					li.desks-result
+						span
+						|  desks
+					li.company-size-result
+						| Company size: 
+						span
+					li.area-result
+						span
+						|  neighborhoods
+					li.move-in-result
+						span
+						|  move-in
+					a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Filters
+
+			.filter-bar-spacer
+
+	.row
+		.col-xs-12.col-md-8.market-building-container
+			.row
+				.col-xs-12: +sales-callout("mid-market", "", "", "For teams of your size, conntact us directly for the most accurate pricing and availability.", "1-855-593-9675", "/")
+				.col-xs-12: +sales-callout("custom-space", "https://cdn.wework.com/6vy33zo2mgy3/5kJDUe1ZBKyusYM642WQGc/f1149a18489318ec4c6fb5556d355242/20170405_Mass_Appeal_Office-16_preview.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=400&h=auto", "You should buy a custom space!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Learn More About Custom Space", "/")
+				.col-xs-12: +sales-callout("enterprise", "https://cdn.wework.com/6vy33zo2mgy3/4qd0vJSCM80qqUyc4wQc24/77d16cd49298f9ed49a525c4698383c5/rsz_sat.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=400&h=200", "Sounds like you need an enterprise solution.","Whether you’re looking for move-in ready offices or fully tailored spaces, we offer an array of solutions for large-scale corporations.", "Learn More About Enterprise", "/")
+				
+			.row
+				.col-xs-12
+					.results-bar
+						p.copy-2 Viewing 25 of 25 locations in Los Angeles
+
+			.row
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/a5985f54-7bae-11e7-a0ad-0a636a339cd2/20170526_Merchant_s_Row_-_Common_Areas-49.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "123 Main St", "123 Main Street, Los Angeles", "", "", "", "/", "", true)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/66df64ee-9330-11e7-b00b-0a636a339cd2/6._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "456 Fairlane", "456 Fairlane Drive, Los Angeles", "$1,000", "$700", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/246c8e78-f0c5-11e7-b01d-1202be33576a/Metropool_by_Brigitte_Kroone-Common_Area-8__1_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "15 Bend St", "15 Bend Street, Los Angeles", "$980", "", "", "/", "Opening Soon", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/233613a4-b03c-11e7-9412-0a636a339cd2/20170117_Long_Beach_-_Members-12.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "72 Redmond", "72 Redmond Way, Los Angeles", "$970", "", "", "/", "Opening Soon", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/cae18020-f0bf-11e7-a24a-1202be33576a/29171214_135_West_41st_Common_Area_11_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "235 Riverdale", "235 Riverdale Drive, Los Angeles", "$900", "", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/7591f35c-d3c3-11e7-8c7f-0a636a339cd2/20171121_W_57th_Interiors_-_Common_Areas_--6.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "1300 Canyon", "1300 Canyon Drive, Los Angeles", "$1,100", "", "$500", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/202949de-3800-11e6-8bc6-0a488af3e541/dumbo-heights-coworking-28.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "422 30th", "422 30th Avenue, Los Angeles", "$710", "$450", "", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/89e518ba-723f-11e7-8ea9-0a636a339cd2/1._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "103 Arches", "103 Arches Lane, Los Angeles", "$750", "$450", "$350", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/e5901bbc-efe2-11e7-b5f6-1202be33576a/20170621_City_Hall_Interiors-22.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "82 Western", "82 Western Boulevard, Los Angeles", "$870", "", "", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/151488d6-4a0e-11e6-8f9f-0a488af3e541/brooklyn-heights-coworking-18.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "65 Summit", "65 Summit Lane, Los Angeles", "$750", "$550", "$300", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/50cf6504-d477-11e7-b0ba-0a636a339cd2/20140729_Columbia_Start_Up_Labs-36-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "167 Wayland", "167 Wayland Street, Los Angeles", "$1,000", "$550", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "1500 Ridgley", "1500 Ridgley Street, Los Angeles", "$900", "", "$450", "/", "", false)
+			
+			.row
+				.col-xs-12
+					+amenity-grid("Amenities", "Every building is equipped to empower your team, 24/7.", 
+												{icon: "web-internet-a", name: "Super-Fast Internet"},
+												{icon: "doc-print-a", name: "Business-Class Printers"},
+												{icon: "time-clock-c", name: "Daily Cleaning"},
+												{icon: "beverage-tea-a", name: "Micro-Roasted Coffee"},
+												{icon: "com-envelope", name: "Mail & Package Handling"},
+												{icon: "user-single-a-group", name: "IT Support"},
+												{icon: "time-calendar-a", name: "24/7 Building Access"},
+												{icon: "misc-globe", name: "Global Network"},
+												{icon: "doc-attachment", name: "Office Supplies"},
+												{icon: "beverage-beer", name: "Craft on Draft"},
+												{icon: "com-phone", name: "Private Phone Booths"},
+												{icon: "transport-bicycle", name: "Bike Storage"})
+
+			.row
+				.col-xs-12
+					.more-options
+						h3.title-1 More Options
+						p.copy-2 12 buildings meet your criteria in other neighborhoods
+
+			.row
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/66df64ee-9330-11e7-b00b-0a636a339cd2/6._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "23 Joyce", "23 Joyce Road, Los Angeles", "$1,000", "$700", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/233613a4-b03c-11e7-9412-0a636a339cd2/20170117_Long_Beach_-_Members-12.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "515 Kings", "515 Kings Lane, Los Angeles", "$970", "", "", "/", "Opening Soon", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/246c8e78-f0c5-11e7-b01d-1202be33576a/Metropool_by_Brigitte_Kroone-Common_Area-8__1_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "42 Bluebell", "42 Bluebell Road, Los Angeles", "$980", "", "", "/", "Opening Soon", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/a5985f54-7bae-11e7-a0ad-0a636a339cd2/20170526_Merchant_s_Row_-_Common_Areas-49.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "331 Fields", "331 Fields Street, Los Angeles", "", "", "", "/", "", true)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/cae18020-f0bf-11e7-a24a-1202be33576a/29171214_135_West_41st_Common_Area_11_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "2330 45th", "2330 45th Avenue, Los Angeles", "$900", "", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/7591f35c-d3c3-11e7-8c7f-0a636a339cd2/20171121_W_57th_Interiors_-_Common_Areas_--6.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "22 Marshall", "22 Marshall Street, Los Angeles", "$1,100", "", "$500", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/202949de-3800-11e6-8bc6-0a488af3e541/dumbo-heights-coworking-28.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "900 Filson", "900 Filson Street, Los Angeles", "$710", "$450", "", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/89e518ba-723f-11e7-8ea9-0a636a339cd2/1._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "3 Balston", "3 Balston Lane, Los Angeles", "$750", "$450", "$350", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/e5901bbc-efe2-11e7-b5f6-1202be33576a/20170621_City_Hall_Interiors-22.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "685 Spruce", "685 Spruce Street, Los Angeles", "$870", "", "", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/151488d6-4a0e-11e6-8f9f-0a488af3e541/brooklyn-heights-coworking-18.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "19 Mayfair", "19 Mayfair Parkway, Los Angeles", "$750", "$550", "$300", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/50cf6504-d477-11e7-b0ba-0a636a339cd2/20140729_Columbia_Start_Up_Labs-36-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "200 Ashton", "200 Ashton Road, Los Angeles", "$1,000", "$550", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "6 Yarrow", "6 Yarrow Street, Los Angeles", "$900", "", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "500 Hugo", "500 Hugo Street, Los Angeles", "$900", "", "$450", "/", "", false)
+
+			.row
+				.col-xs-12
+					.responsive-block
+						h3.title-1 Coworking Space Los Angeles
+						p.copy-2 WeWork’s network of spaces for Los Angeles coworking provide members with a wealth of options spread throughout the area, so you can be close to your contacts in film, fashion, design, tech, or business. Each location is unique and aesthetically inspired by its neighborhood, but all of them channel that famous LA cool.
+						h3.title-2 The Ins &amp; Outs of Los Angeles Office Space
+						p.copy-2 LA is the Creative Capital of the World, a place where one in every six residents works in the creative industry and one in every four street corners has a pop-up food truck with a line around the block. With its cultural popularity and a history driven by international trade, entertainment, technology, and fashion, Los Angeles presents itself and its economy as a wealth of opportunity to grow almost any kind of business. In WeWork’s Los Angeles cowork offices, members range from small tech startups to larger media operations and more. All enjoy the everyday perks of shared office space like unlimited micro-roasted coffee, dedicated front desk teams, and modern meeting rooms, but the community also reaps the benefits of personalized support from our Community Managers, flexible workspace plans, access to exclusive networking events, and more. If you’re looking for the trendsetters in LA coworking offices, WeWork’s got you.
+
+		.col-xs-12.col-md-4.market-map-container
+			.map.map-la
