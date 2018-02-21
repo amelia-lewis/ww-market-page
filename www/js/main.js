@@ -14,10 +14,14 @@ var marketBuildingContainer = $(".market-building-container");
 var marketMapContainer = $(".market-map-container");
 var tooltip = $(".tooltip");
 
+// On load
 $(window).on("load", function(e) {
 	tooltip.addClass("show");
+	$(".switch-text-group .label--switch-text:first-of-type").addClass("selected");
+	filterBarSpacer.height(filterBar.outerHeight());
 });
 
+// Sticky bar on scroll
 $(window).on("scroll", function(e) {
 	if ($(window).scrollTop() > ($(header).outerHeight() + $(marketPageIntro).outerHeight())) {
 		filterBar.addClass("fixed");
@@ -30,13 +34,14 @@ $(window).on("scroll", function(e) {
 });
 
 $(window).on("scroll", function(e) {
-	if ($(window).scrollTop() > ($(header).outerHeight() + $(marketPageIntro).outerHeight() + $(resultsBar).outerHeight() - 16) && $(window).width() > 1024) {
+	if ($(window).scrollTop() > ($(header).outerHeight() + $(marketPageIntro).outerHeight()) && $(window).width() > 1024) {
 		map.addClass("fixed");
 	} else {
 		map.removeClass("fixed");
 	}
 });
 
+// Checkboxes and radios
 $("input:checkbox").change(function(){
 	if($(this).is(":checked")) {
 		$(this).parent().addClass("selected"); 
@@ -54,18 +59,20 @@ $("input:radio").change(function(){
 	}
  });
 
+// Open filters
 filterBtn.on("click", function(e) {
 	filters.addClass("show");
 	$("html, body").css({overflow: "hidden"});
 	tooltip.removeClass("show");
 });
 
-$(".filter-results").on("click", function(e) {
+$(".filter-results li").on("click", function(e) {
 	filters.addClass("show");
 	$("html, body").css({overflow: "hidden"});
 	tooltip.removeClass("show");
 });
 
+// Close and apply filters
 filterBtnClose.on("click", function(e) {
 	filters.removeClass("show");
 	$("html, body").css({overflow: "auto"});
@@ -73,7 +80,7 @@ filterBtnClose.on("click", function(e) {
 	if($("input:radio").parent().hasClass("selected") || $("input:checkbox").parent().hasClass("selected") || $("#desk-number").val()) {
 		marketBuildingContainer.addClass("filtered");
 		filterBtnClear.show();
-		$(".results-bar p").text("Viewing 6 of 49 locations in New York City");
+		$(".results-bar p span").text("12 buildings match your criteria");
 	}
 
 	if($("input:radio[name=when]").parent().hasClass("selected")) {
@@ -113,8 +120,11 @@ filterBtnClose.on("click", function(e) {
 		$(".sales-callout-enterprise").show();
 		$(".sales-callout-custom-space").hide();
 	}
+
+	$(".market-building-container").randomize(".col-xs-12.col-sm-6", ".building-card");
 });
 
+// Clear filters
 filterBtnClear.on("click", function(e) {
 	marketBuildingContainer.removeClass("filtered");
 	filterBtnClear.hide();
@@ -122,7 +132,7 @@ filterBtnClear.on("click", function(e) {
 	$('input:checkbox').prop('checked', false);
 	$("input:radio").parent().removeClass("selected");
 	$("input:checkbox").parent().removeClass("selected");
-	$(".results-bar p").text("Viewing 49 of 49 locations in New York City");
+	$(".results-bar p span").text("Viewing 25 of 25 locations");
 	$("#desk-number").val('');
 	$(".company-size-result").hide();
 	$(".move-in-result").hide();
@@ -133,6 +143,7 @@ filterBtnClear.on("click", function(e) {
 	$(".sales-callout-custom-space").hide();
 });
 
+// Close filters with escape key
 $(document).keydown(function(e){
 	if(e.keyCode == 27) {
 		if (filters.hasClass('show')) {
@@ -141,6 +152,7 @@ $(document).keydown(function(e){
 	}
 });
 
+// Toggle between list and map view
 toggleMapView.on("click", function(e) {
 	if ($(window).width() < 1024) {
 		marketBuildingContainer.hide();
@@ -155,6 +167,29 @@ toggleListView.on("click", function(e) {
 	}
 });
 
+// Map card
+map.on("click", function(e) {
+	map.toggleClass("show-card");
+});
+
+// Hide tooltip
 tooltip.on("click", function(e) {
 	tooltip.removeClass("show");
 });
+
+// Randomize function
+(function($) {
+  $.fn.randomize = function(tree, childElem) {
+    return this.each(function() {
+      var $this = $(this);
+      if (tree) $this = $(this).find(tree);
+      var unsortedElems = $this.children(childElem);
+      var elems = unsortedElems.clone();
+      
+      elems.sort(function() { return (Math.round(Math.random())-0.5); });  
+
+      for(var i=0; i < elems.length; i++)
+        unsortedElems.eq(i).replaceWith(elems[i]);
+    });    
+  };
+})(jQuery);

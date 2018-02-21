@@ -133,8 +133,6 @@
 // Callouts
 .sales-callout {
 	display: none;
-	background: $black-50;
-	color: $white;
 	margin: 16px 0 0;
 
 	.image {
@@ -144,8 +142,86 @@
 		background-size: cover;
 	}
 
-	.text-container {
-		padding: $spacer-xs $spacer-xs 10px;
+	&.sales-callout-mid-market {
+		background: $bg-3;
+		padding: 30px;
+
+		@media (min-width: $screen-md-min) {
+			p {
+				margin: 0;
+			}
+
+			.col-md-3 {
+				text-align: right;
+			}
+		}
+	}
+
+	&.sales-callout-custom-space,
+	&.sales-callout-enterprise {
+		.sales-callout-container {
+			display: flex;
+			flex-direction: column;
+
+			.image {
+				background: $black-50 no-repeat center;
+				background-size: cover;
+				height: 200px;
+			}
+
+			.text-container {
+				background: $black-40;
+				color: $white;
+				padding: 30px;
+
+				h3 {
+					margin-top: 0;
+				}
+
+				.btn {
+					margin: 20px 0 0;
+					width: 100%;
+				}
+			}
+
+			@media (min-width: $screen-md-min) {
+				flex-direction: row;
+				align-items: stretch;
+				height: 300px;
+
+				.image {
+					order: 2;
+					flex-basis: 50%;
+					height: auto;
+				}
+
+				.text-container {
+					flex-basis: 50%;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					position: relative;
+
+					.btn {
+						align-self: flex-start;
+						width: auto;
+						margin: 0;
+					}
+
+					&:after {
+						content: "";
+						position: absolute;
+						width: 0;
+						height: 0;
+						border-top: 0px solid transparent;
+						border-bottom: 300px solid transparent;
+						border-left: 60px solid $black-40;
+						top: 0;
+						left: 100%;
+					}
+				}
+			}
+		}
 	}
 }
 

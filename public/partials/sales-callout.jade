@@ -1,12 +1,26 @@
-mixin sales-callout(name, img, headline, copy, btnCopy, btnLink)
-	.sales-callout(class="sales-callout-" + name)
-		if img
-			.image(style="background-image: url('" + img + "')")
-		
-		.text-container
-			if headline
-				h3.title-2= headline
-			if copy
-				p.copy-2= copy
-			if btnCopy
-				a.btn.btn--tertiary-light(href=btnLink)= btnCopy
+mixin sales-callout(name, img, headline, copy, btnType, btnCopy, btnLink)
+	if name == "mid-market"
+		.sales-callout(class="sales-callout-" + name)
+			.row.middle-md
+				.col-xs-12.col-md-9
+					if headline
+						h3.title-2= headline
+					if copy
+						p.copy-3= copy
+				.col-xs-12.col-md-3
+					if btnCopy
+						a.btn(class="btn--" + btnType href=btnLink)= btnCopy
+
+	else
+		.sales-callout(class="sales-callout-" + name)
+			.sales-callout-container
+				.image(style="background-image: url('" + img + "')")
+				
+				.text-container
+					.text-container-inner
+						if headline
+							h3.title-2= headline
+						if copy
+							p.copy-3= copy
+					if btnCopy
+						a.btn(class="btn--" + btnType href=btnLink)= btnCopy

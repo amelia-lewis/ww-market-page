@@ -23,7 +23,7 @@
 	.content-wrap {
 		opacity: 0;
 		transform: translate(0, -1 * $spacer-md);
-		transition: transform 500ms;
+		transition: transform 500ms, opacity 500ms;
 		overflow-y: scroll;
 	}
 

@@ -19,6 +19,14 @@ $(window).on("load", function(e) {
 	tooltip.addClass("show");
 	$(".switch-text-group .label--switch-text:first-of-type").addClass("selected");
 	filterBarSpacer.height(filterBar.outerHeight());
+
+	$(".area-result").show();
+	$(".area-result span").text('All');
+
+	$(".desks-result").show();
+	$(".desks-result span").text('1');
+
+	$('#desk-number').val('1');
 });
 
 // Sticky bar on scroll
@@ -80,7 +88,7 @@ filterBtnClose.on("click", function(e) {
 	if($("input:radio").parent().hasClass("selected") || $("input:checkbox").parent().hasClass("selected") || $("#desk-number").val()) {
 		marketBuildingContainer.addClass("filtered");
 		filterBtnClear.show();
-		$(".results-bar p").text("12 buildings match your criteria");
+		$(".results-bar p span").text("12 buildings match your criteria");
 	}
 
 	if($("input:radio[name=when]").parent().hasClass("selected")) {
@@ -132,7 +140,7 @@ filterBtnClear.on("click", function(e) {
 	$('input:checkbox').prop('checked', false);
 	$("input:radio").parent().removeClass("selected");
 	$("input:checkbox").parent().removeClass("selected");
-	$(".results-bar p").text("Viewing 49 of 49 locations in New York City");
+	$(".results-bar p span").text("Viewing 25 of 25 locations");
 	$("#desk-number").val('');
 	$(".company-size-result").hide();
 	$(".move-in-result").hide();
@@ -141,6 +149,9 @@ filterBtnClear.on("click", function(e) {
 	$(".sales-callout-mid-market").hide();
 	$(".sales-callout-enterprise").hide();
 	$(".sales-callout-custom-space").hide();
+
+	$(".area-result").show();
+	$(".area-result span").text('All');
 });
 
 // Close filters with escape key

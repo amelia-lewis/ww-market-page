@@ -1,5 +1,5 @@
 include ../partials/building-card
-include ../partials/market-filters
+include ../partials/market-filters-nyc
 include ../partials/sales-callout
 include ../partials/amenity-grid
 
@@ -28,12 +28,12 @@ include ../partials/amenity-grid
 				ul.filter-results
 					li.desks-result
 						span
-						|  desks
+						|  desk(s)
 					li.company-size-result
 						| Company size: 
 						span
 					li.area-result
-						span
+						span 
 						|  neighborhoods
 					li.move-in-result
 						span
@@ -45,14 +45,16 @@ include ../partials/amenity-grid
 	.row
 		.col-xs-12.col-md-8.market-building-container
 			.row
-				.col-xs-12: +sales-callout("mid-market", "", "", "For teams of your size, conntact us directly for the most accurate pricing and availability.", "1-855-593-9675", "/")
-				.col-xs-12: +sales-callout("custom-space", "https://cdn.wework.com/6vy33zo2mgy3/5kJDUe1ZBKyusYM642WQGc/f1149a18489318ec4c6fb5556d355242/20170405_Mass_Appeal_Office-16_preview.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=400&h=auto", "You should buy a custom space!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Learn More About Custom Space", "/")
-				.col-xs-12: +sales-callout("enterprise", "https://cdn.wework.com/6vy33zo2mgy3/4qd0vJSCM80qqUyc4wQc24/77d16cd49298f9ed49a525c4698383c5/rsz_sat.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=400&h=200", "Sounds like you need an enterprise solution.","Whether you’re looking for move-in ready offices or fully tailored spaces, we offer an array of solutions for large-scale corporations.", "Learn More About Enterprise", "/")
+				.col-xs-12: +sales-callout("mid-market", "", "Find space for teams your size", "Contact us directly for the most accurate pricing and availability.", "tertiary-navigation", "1-855-593-9675", "/")
+				.col-xs-12: +sales-callout("custom-space", "https://cdn.wework.com/6vy33zo2mgy3/2foSQCtnycUOgAM28CyYW6/0844050dd7094923299584ee4b7a1f00/20170404_Mixpanel_Office-46__1_.jpg", "Sounds like you need a custom buildout", "Whether you need a unique suite or a one-of-a-kind HQ, out experts can help you create workspace solutions that are optimized for your business.", "primary-light", "View Custom Solutions", "/")
+				.col-xs-12: +sales-callout("enterprise", "https://cdn.wework.com/6vy33zo2mgy3/4qd0vJSCM80qqUyc4wQc24/77d16cd49298f9ed49a525c4698383c5/rsz_sat.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=400&h=200", "Sounds like you need an enterprise solution","Whether you’re looking for move-in ready offices or fully tailored spaces, we offer an array of solutions for large-scale corporations.", "primary-light", "View Enterprise Solutions", "/")
 				
 			.row
 				.col-xs-12
 					.results-bar
-						p.copy-2 Viewing 25 of 25 locations in New York City
+						p.copy-2
+							span Viewing 25 of 25 locations
+							|  in New York City
 
 			.row
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/a5985f54-7bae-11e7-a0ad-0a636a339cd2/20170526_Merchant_s_Row_-_Common_Areas-49.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "123 Main St", "123 Main Street, New York City", "", "", "", "/", "", true)
@@ -88,7 +90,7 @@ include ../partials/amenity-grid
 				.col-xs-12
 					.more-options
 						h3.title-1 More Options
-						p.copy-2 12 buildings meet your criteria in other neighborhoods
+						p.copy-2 13 buildings meet your criteria in other neighborhoods
 
 			.row
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/66df64ee-9330-11e7-b00b-0a636a339cd2/6._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "23 Joyce", "23 Joyce Road, New York City", "$1,000", "$700", "$450", "/", "", false)

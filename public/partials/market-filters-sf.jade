@@ -1,0 +1,57 @@
+.market-filters
+	i.bi_interface-cross.btn-market-filters-close
+	
+	.content-wrap
+		.responsive-block
+			.row
+				.col-xs-12.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+					h2.title-1 Find the Perfect Space
+
+			form
+				.row
+					.col-xs-12.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+						label(for="desk-number") How many desks do you need?
+							input(type="number" id="desk-number" name="desk-number" placeholder="Approximate number")
+
+						label How many people are in your company?
+							.toggle-group
+								label.label--toggle(for='company-size-1') 1–19
+									input#company-size-1(type='radio', name='company-size', value='1–19')
+								label.label--toggle(for='company-size-2') 20–99
+									input#company-size-2(type='radio', name='company-size', value='20–99')
+								label.label--toggle(for='company-size-3') 100–999
+									input#company-size-3(type='radio', name='company-size', value='100–999')
+								label.label--toggle(for='company-size-3') 1000+
+									input#company-size-3(type='radio', name='company-size', value='1000+')
+
+						label When would you like to move in?
+							.row
+								.col-xs-6
+									label.label--radio-checkbox(for='when-asap') ASAP
+										input#when-asap(type='radio', name='when', value='ASAP')
+									label.label--radio-checkbox(for='when-next-month') Next month
+										input#when-next-month(type='radio', name='when', value='Next month')
+								.col-xs-6
+									label.label--radio-checkbox(for='when-after-next-month') After next month
+										input#when-after-next-month(type='radio', name='when', value='After next month')
+									label.label--radio-checkbox(for='when-undecided') Undecided
+										input#when-undecided(type='radio', name='when', value='Undecided')
+
+						label What areas are you interested in?
+							.row
+								.col-xs-6
+									label.label--radio-checkbox(for='area-san-francisco') San Francisco
+										input#area-san-francisco(type='checkbox', name='area', value='San Francisco')
+									label.label--radio-checkbox(for='area-san-jose') San Jose
+										input#area-san-jose(type='checkbox', name='area', value='San Jose')
+
+								.col-xs-6
+									label.label--radio-checkbox(for='area-berkeley') Berkeley
+										input#area-berkeley(type='checkbox', name='area', value='Berkeley')
+									label.label--radio-checkbox(for='area-oakland') Oakland
+										input#area-oakland(type='checkbox', name='area', value='Oakland')
+
+						.row
+							.col-xs-12
+								a.btn.btn--primary-navigation.btn-market-filters-close View Results
+								a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Filters
