@@ -129,6 +129,19 @@ filterBtnClose.on("click", function(e) {
 		$(".sales-callout-custom-space").hide();
 	}
 
+	if($('input:radio[name=company-size]:checked').val() == "100–999") {
+		$(".sales-callout-mid-market").hide();
+		$(".sales-callout-custom-space").show();
+		$(".sales-callout-enterprise").hide();
+		console.log("poop");
+	}
+
+	if($('input:radio[name=company-size]:checked').val() == "1000+") {
+		$(".sales-callout-mid-market").hide();
+		$(".sales-callout-custom-space").hide();
+		$(".sales-callout-enterprise").show();
+	}
+
 	$(".market-building-container").randomize(".col-xs-12.col-sm-6", ".building-card");
 });
 
