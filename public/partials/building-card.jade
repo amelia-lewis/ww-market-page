@@ -6,13 +6,18 @@ mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, b
 		.text-container
 			.info
 				.row
-					.col-xs-12
+					.col-xs-12.text-center
 						h3.title-2= name
 				
 				.row
-					.col-xs-12
+					.col-xs-12.text-center
 						p.copy-3= address
-						hr
+						br
+
+				if poPrice || poPrice || hdPrice
+					.row
+						.col-xs-12
+							p.copy-4.text-gray Starting prices, per person:
 
 				if poPrice
 					.row
@@ -20,6 +25,7 @@ mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, b
 							p.copy-3 Private Office
 						.col-xs-6.text-right
 							p.copy-3= poPrice
+								span /mo
 
 				if ddPrice
 					.row
@@ -27,6 +33,7 @@ mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, b
 							p.copy-3 Dedicated Desk
 						.col-xs-6.text-right
 							p.copy-3= ddPrice
+								span /mo
 
 				if hdPrice
 					.row
@@ -34,6 +41,7 @@ mixin building-card(img, name, address, poPrice, ddPrice, hdPrice, buttonLink, b
 							p.copy-3 Hot desk
 						.col-xs-6.text-right
 							p.copy-3= hdPrice
+								span /mo
 
 				if presale
 					.row
