@@ -67,6 +67,7 @@
 
 	.btn-market-filters {
 		margin: 0 10px 0 0;
+		padding: 0 20px;
 	}
 
 	.btn-market-filters-clear {
@@ -85,25 +86,35 @@
 
 	.filter-results {
 		display: flex;
-		list-style: none;
-		flex-direction: row;
-		margin: 0;
-		padding: 0;
-		cursor: pointer;
+		flex-basis: 100%;
+		margin: 10px 0 0;
+		flex-wrap: wrap;
 
-		li {
-			display: none;
-			background: $bg-1;
-			border: 1px solid $gray-40;
-			@extend .copy-3;
-			height: 44px;
-			line-height: 44px;
-			padding: 0 15px;
-			margin: 0 10px 0 0;
+		@media (min-width: $screen-md-min) {
+			flex-grow: 1;
+			margin: 0;
+			flex-wrap: nowrap;
 		}
+		
+		ul {
+			display: flex;
+			list-style: none;
+			flex-direction: row;
+			margin: 0;
+			padding: 0;
+			cursor: pointer;
 
-		@media (max-width: $screen-md-min) {
-			display: none;
+			li {
+				display: none;
+				background: $bg-1;
+				border: 1px solid $gray-40;
+				@extend .copy-3;
+				height: 44px;
+				line-height: 44px;
+				padding: 0 15px;
+				margin: 0 10px 0 0;
+				white-space: nowrap;
+			}
 		}
 	}
 }

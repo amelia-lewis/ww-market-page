@@ -26,20 +26,21 @@ include ../partials/amenity-grid
 						input#list-view(type='radio', name='toggle-view', value='list', checked)
 					label.label--toggle(for='map-view') Map
 						input#map-view(type='radio', name='toggle-view', value='map')
-				ul.filter-results
-					li.desks-result
-						span
-						|  desks
-					li.company-size-result
-						| Company size: 
-						span
-					li.area-result
-						span
-						|  areas
-					li.move-in-result
-						span
-						|  move-in
-				a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Filters
+				.filter-results
+					ul
+						li.desks-result
+							span
+							|  desks
+						li.company-size-result
+							| Company size: 
+							span
+						li.area-result
+							span
+							|  areas
+						li.move-in-result
+							span
+							|  move-in
+					a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Filters
 
 			.filter-bar-spacer
 
@@ -55,18 +56,31 @@ include ../partials/amenity-grid
 				.col-xs-12: +sales-callout("custom-space", "https://cdn.wework.com/6vy33zo2mgy3/5kJDUe1ZBKyusYM642WQGc/f1149a18489318ec4c6fb5556d355242/20170405_Mass_Appeal_Office-16_preview.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=400&h=auto", "You should buy a custom space!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Learn More About Custom Space", "/")
 				.col-xs-12: +sales-callout("enterprise", "https://cdn.wework.com/6vy33zo2mgy3/4qd0vJSCM80qqUyc4wQc24/77d16cd49298f9ed49a525c4698383c5/rsz_sat.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=400&h=200", "Sounds like you need an enterprise solution.","Whether you’re looking for move-in ready offices or fully tailored spaces, we offer an array of solutions for large-scale corporations.", "Learn More About Enterprise", "/")
 				
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/66df64ee-9330-11e7-b00b-0a636a339cd2/6._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "575 Fifth", "575 5th Ave. New York NY 10017", "$1,000", "$700", "$450", "/", "", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/233613a4-b03c-11e7-9412-0a636a339cd2/20170117_Long_Beach_-_Members-12.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "135 Madison", "135 Madison Ave New York NY 10016", "$970", "", "", "/", "Opening Soon", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/246c8e78-f0c5-11e7-b01d-1202be33576a/Metropool_by_Brigitte_Kroone-Common_Area-8__1_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "11 Park Place", "11 Park Place New York NY 10007", "$980", "", "", "/", "Opening Soon", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/a5985f54-7bae-11e7-a0ad-0a636a339cd2/20170526_Merchant_s_Row_-_Common_Areas-49.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "Queens Plaza", "27-01 Queens Plaza N Long Island City NY 10011", "", "", "", "/", "", true)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/cae18020-f0bf-11e7-a24a-1202be33576a/29171214_135_West_41st_Common_Area_11_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "135 West 41st St.", "135 West 41st St 5th Floor New York NY 10036", "$900", "", "$450", "/", "", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/7591f35c-d3c3-11e7-8c7f-0a636a339cd2/20171121_W_57th_Interiors_-_Common_Areas_--6.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "W. 57th St.", "142 W 57th St New York NY 10019", "$1,100", "", "$500", "/", "", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/202949de-3800-11e6-8bc6-0a488af3e541/dumbo-heights-coworking-28.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "Dumbo Heights", "81 Prospect St Brooklyn NY 11201", "$710", "$450", "", "/", "", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/89e518ba-723f-11e7-8ea9-0a636a339cd2/1._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "South Williamsburg", "109 S 5th Street Brooklyn NY 11249", "$750", "$450", "$350", "/", "", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/e5901bbc-efe2-11e7-b5f6-1202be33576a/20170621_City_Hall_Interiors-22.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "City Hall", "222 Broadway 19th Floor New York NY 10038", "$870", "", "", "/", "", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/151488d6-4a0e-11e6-8f9f-0a488af3e541/brooklyn-heights-coworking-18.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "Montague St.", "195 Montague Street 14th Floor Brooklyn NY 11201", "$750", "$550", "$300", "/", "", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/50cf6504-d477-11e7-b0ba-0a636a339cd2/20140729_Columbia_Start_Up_Labs-36-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "SoHo West", "175 Varick Street New York NY 10014", "$1,000", "$550", "$450", "/", "", false)
-				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "205 Hudson", "205 Hudson St New York NY 10013", "$900", "", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/66df64ee-9330-11e7-b00b-0a636a339cd2/6._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "355 15th", "355 15th Avenue, New York City", "$1,000", "$700", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/233613a4-b03c-11e7-9412-0a636a339cd2/20170117_Long_Beach_-_Members-12.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "72 Redmond", "72 Redmond Way, New York City", "$970", "", "", "/", "Opening Soon", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/246c8e78-f0c5-11e7-b01d-1202be33576a/Metropool_by_Brigitte_Kroone-Common_Area-8__1_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "15 Bend St", "15 Bend Street, New York City", "$980", "", "", "/", "Opening Soon", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/a5985f54-7bae-11e7-a0ad-0a636a339cd2/20170526_Merchant_s_Row_-_Common_Areas-49.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "200 Main St", "200 Main Street, New York City", "", "", "", "/", "", true)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/cae18020-f0bf-11e7-a24a-1202be33576a/29171214_135_West_41st_Common_Area_11_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "235 Riverdale", "235 Riverdale Drive, New York City", "$900", "", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/7591f35c-d3c3-11e7-8c7f-0a636a339cd2/20171121_W_57th_Interiors_-_Common_Areas_--6.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "1300 Canyon", "1300 Canyon Drive, New York City", "$1,100", "", "$500", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/202949de-3800-11e6-8bc6-0a488af3e541/dumbo-heights-coworking-28.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "422 30th", "422 30th Avenue, New York City", "$710", "$450", "", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/89e518ba-723f-11e7-8ea9-0a636a339cd2/1._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "103 Arches", "103 Arches Lane, New York City", "$750", "$450", "$350", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/e5901bbc-efe2-11e7-b5f6-1202be33576a/20170621_City_Hall_Interiors-22.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "82 Western", "82 Western Boulevard, New York City", "$870", "", "", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/151488d6-4a0e-11e6-8f9f-0a488af3e541/brooklyn-heights-coworking-18.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "65 Summit", "65 Summit Lane, New York City", "$750", "$550", "$300", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/50cf6504-d477-11e7-b0ba-0a636a339cd2/20140729_Columbia_Start_Up_Labs-36-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "167 Wayland", "167 Wayland Street, New York City", "$1,000", "$550", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "1500 Ridgley", "1500 Ridgley Street, New York City", "$900", "", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/66df64ee-9330-11e7-b00b-0a636a339cd2/6._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "23 Joyce", "23 Joyce Road, New York City", "$1,000", "$700", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/233613a4-b03c-11e7-9412-0a636a339cd2/20170117_Long_Beach_-_Members-12.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "515 Kings", "515 Kings Lane, New York City", "$970", "", "", "/", "Opening Soon", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/246c8e78-f0c5-11e7-b01d-1202be33576a/Metropool_by_Brigitte_Kroone-Common_Area-8__1_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "42 Bluebell", "42 Bluebell Road, New York City", "$980", "", "", "/", "Opening Soon", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/a5985f54-7bae-11e7-a0ad-0a636a339cd2/20170526_Merchant_s_Row_-_Common_Areas-49.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "331 Fields", "331 Fields Street, New York City", "", "", "", "/", "", true)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/cae18020-f0bf-11e7-a24a-1202be33576a/29171214_135_West_41st_Common_Area_11_.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "2330 45th", "2330 45th Avenue, New York City", "$900", "", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/7591f35c-d3c3-11e7-8c7f-0a636a339cd2/20171121_W_57th_Interiors_-_Common_Areas_--6.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "22 Marshall", "22 Marshall Street, New York City", "$1,100", "", "$500", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/202949de-3800-11e6-8bc6-0a488af3e541/dumbo-heights-coworking-28.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "900 Filson", "900 Filson Street, New York City", "$710", "$450", "", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/89e518ba-723f-11e7-8ea9-0a636a339cd2/1._Website.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "3 Balston", "3 Balston Lane, New York City", "$750", "$450", "$350", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/e5901bbc-efe2-11e7-b5f6-1202be33576a/20170621_City_Hall_Interiors-22.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "685 Spruce", "685 Spruce Street, New York City", "$870", "", "", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/151488d6-4a0e-11e6-8f9f-0a488af3e541/brooklyn-heights-coworking-18.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "19 Mayfair", "19 Mayfair Parkway, New York City", "$750", "$550", "$300", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/50cf6504-d477-11e7-b0ba-0a636a339cd2/20140729_Columbia_Start_Up_Labs-36-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "200 Ashton", "200 Ashton Road, New York City", "$1,000", "$550", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "6 Yarrow", "6 Yarrow Street, New York City", "$900", "", "$450", "/", "", false)
+				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "500 Hugo", "500 Hugo Street, New York City", "$900", "", "$450", "/", "", false)
 
 				.col-xs-12
 					+amenity-grid("Amenities", "Every building is equipped to empower your team, 24/7.", 
