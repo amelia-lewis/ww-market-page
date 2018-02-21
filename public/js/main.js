@@ -60,7 +60,7 @@ filterBtn.on("click", function(e) {
 	tooltip.removeClass("show");
 });
 
-$(".filter-results").on("click", function(e) {
+$(".filter-results ul li").on("click", function(e) {
 	filters.addClass("show");
 	$("html, body").css({overflow: "hidden"});
 	tooltip.removeClass("show");
