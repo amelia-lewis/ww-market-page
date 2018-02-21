@@ -166,10 +166,9 @@ input[type="checkbox"] {
 // ---------------
 
 .toggle-group {
-	display: block;
+	display: flex;
 	margin: 10px 0 20px;
 	width: 100%;
-	display: flex;
 }
 
 .label--toggle {
@@ -216,6 +215,71 @@ input[type="checkbox"] {
 
 		&:last-of-type:before {
 			border-radius: 0 2px 2px 0;
+		}
+	}
+}
+
+
+// ---------------
+// Switch w/ Text
+// ---------------
+.switch-text-group {
+	display: flex;
+
+	.label--switch-text {
+		display: inline-block;
+		height: 44px;
+		line-height: 32px;
+		padding: 6px 15px;
+		margin: 0;
+		text-align: center;
+		position: relative;
+		border: solid $gray-40;
+		z-index: 1;
+		flex-grow: 1;
+
+		&:first-of-type {
+			border-radius: 22px 0 0 22px;
+			border-width: 1px 0 1px 1px;
+			margin: 0 -12px 0 0;
+		}
+
+		&:last-of-type {
+			border-radius: 0 22px 22px 0;
+			border-width: 1px 1px 1px 0;
+		}
+
+		&.selected {
+			color: $white;
+		}
+
+		input[type="radio"] {
+			position: absolute;
+			top: 5px;
+			left: 6px;
+			display: block;
+			width: calc(100% - 12px);
+			height: 32px;
+			margin: 0;
+			padding: 0 5px;
+			float: none;
+			cursor: pointer;
+
+			&:before {
+				border-radius: 16px;
+				border: none;
+				z-index: -1;
+			}
+
+			&:checked {
+				&:before {
+					background: $blue-50;
+				}
+
+				&:after {
+					display: none;
+				}
+			}
 		}
 	}
 }

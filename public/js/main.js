@@ -14,8 +14,10 @@ var marketBuildingContainer = $(".market-building-container");
 var marketMapContainer = $(".market-map-container");
 var tooltip = $(".tooltip");
 
+
 $(window).on("load", function(e) {
 	tooltip.addClass("show");
+	$(".switch-text-group .label--switch-text:first-of-type").addClass("selected");
 });
 
 $(window).on("scroll", function(e) {
@@ -60,7 +62,7 @@ filterBtn.on("click", function(e) {
 	tooltip.removeClass("show");
 });
 
-$(".filter-results ul li").on("click", function(e) {
+$(".filter-results li").on("click", function(e) {
 	filters.addClass("show");
 	$("html, body").css({overflow: "hidden"});
 	tooltip.removeClass("show");

@@ -13,7 +13,6 @@ include ../partials/amenity-grid
 	.row
 		.col-xs-12
 			.filter-bar
-				//- h1.impact-2 Inspiring Workspace in New York City
 				.tooltip-wrapper
 					a.btn.btn--primary-navigation.btn-market-filters
 						i.bi_setting-eq-a
@@ -21,25 +20,24 @@ include ../partials/amenity-grid
 					.tooltip
 						| Our filters can help you refine your workspace results.
 						i.bi_interface-cross
-				.toggle-group
-					label.label--toggle(for='list-view') List
+				.switch-text-group
+					label.label--switch-text(for='list-view') List
 						input#list-view(type='radio', name='toggle-view', value='list', checked)
-					label.label--toggle(for='map-view') Map
+					label.label--switch-text(for='map-view') Map
 						input#map-view(type='radio', name='toggle-view', value='map')
-				.filter-results
-					ul
-						li.desks-result
-							span
-							|  desks
-						li.company-size-result
-							| Company size: 
-							span
-						li.area-result
-							span
-							|  areas
-						li.move-in-result
-							span
-							|  move-in
+				ul.filter-results
+					li.desks-result
+						span
+						|  desks
+					li.company-size-result
+						| Company size: 
+						span
+					li.area-result
+						span
+						|  areas
+					li.move-in-result
+						span
+						|  move-in
 					a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Filters
 
 			.filter-bar-spacer

@@ -70,15 +70,7 @@
 		padding: 0 20px;
 	}
 
-	.btn-market-filters-clear {
-		margin: 0;
-		display: none;
-	}
-
-	.toggle-group {
-		max-width: 124px;
-		margin: 0;
-
+	.switch-text-group {
 		@media (min-width: $screen-md-min) {
 			display: none;
 		}
@@ -86,9 +78,13 @@
 
 	.filter-results {
 		display: flex;
-		flex-basis: 100%;
-		margin: 10px 0 0;
 		flex-wrap: wrap;
+		flex-basis: 100%;
+		list-style: none;
+		flex-direction: row;
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
 
 		@media (min-width: $screen-md-min) {
 			flex-grow: 1;
@@ -96,24 +92,28 @@
 			flex-wrap: nowrap;
 		}
 		
-		ul {
-			display: flex;
-			list-style: none;
-			flex-direction: row;
-			margin: 0;
-			padding: 0;
-			cursor: pointer;
+		li {
+			display: none;
+			background: $bg-1;
+			border: 1px solid $gray-40;
+			@extend .copy-3;
+			height: 44px;
+			line-height: 44px;
+			padding: 0 15px;
+			margin: 10px 10px 0 0;
+			white-space: nowrap;
 
-			li {
-				display: none;
-				background: $bg-1;
-				border: 1px solid $gray-40;
-				@extend .copy-3;
-				height: 44px;
-				line-height: 44px;
-				padding: 0 15px;
+			@media (min-width: $screen-md-min) {
 				margin: 0 10px 0 0;
-				white-space: nowrap;
+			}
+		}
+
+		.btn-market-filters-clear {
+			margin: 10px 10px 0 0;
+			display: none;
+
+			@media (min-width: $screen-md-min) {
+				margin: 0;
 			}
 		}
 	}
