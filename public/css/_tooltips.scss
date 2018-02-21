@@ -15,22 +15,26 @@
 	left: 0;
 	top: calc(100% + 15px);
 	transform: translate(0, 4px);
-	white-space: nowrap;
-	text-align: center;
+	width: 280px;
 	border-radius: 2px;
 	z-index: 100;
 	opacity: 0;
 	transition: all 400ms;
 	pointer-events: none;
 
+	@media (min-width: $screen-md-min) {
+		white-space: nowrap;
+		width: auto;
+	}
+
 	&:before {
 		content: "";
 		position: absolute;
-		left: 20px;
+		left: 10px;
 		top: 0;
 		background: $black-50;
-		width: 15px;
-		height: 15px;
+		width: 10px;
+		height: 10px;
 		border-radius: 2px;
 		transform: translate(0, -50%) rotate(45deg);
 		z-index: -1;

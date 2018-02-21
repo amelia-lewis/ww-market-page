@@ -73,7 +73,7 @@ filterBtnClose.on("click", function(e) {
 	if($("input:radio").parent().hasClass("selected") || $("input:checkbox").parent().hasClass("selected") || $("#desk-number").val()) {
 		marketBuildingContainer.addClass("filtered");
 		filterBtnClear.show();
-		$(".results-bar p").text("Viewing 6 of 49 locations in New York City");
+		$(".results-bar p span").text("Viewing 6 of 49 locations");
 	}
 
 	if($("input:radio[name=when]").parent().hasClass("selected")) {

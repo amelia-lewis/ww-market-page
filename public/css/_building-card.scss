@@ -60,6 +60,10 @@
 					transform: translate(-4px, 0);
 				}
 			}
+
+			@media (max-width: $screen-md-min) {
+				display: none;
+			}
 		}
 
 		.pagination {
@@ -75,7 +79,7 @@
 				width: 7px;
 				height: 7px;
 				border-radius: 50%;
-				background: $gray-40;
+				background: $white;
 				box-shadow: 0 1px 4px rgba($black-50, 0.3);
 				margin: 0 3px;
 
