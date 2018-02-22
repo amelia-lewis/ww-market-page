@@ -227,16 +227,14 @@
 
 // Amenity Grid
 .amenity-grid {
-	display: none;
-	
 	.content-wrap {
 		width: 100%;
 	}
 }
 
-// More Options
-.more-options {
-	display: none;
+// Filtered Show/Hide
+.hide-before-filtered {
+	display: none !important;
 }
 
 // Map
@@ -295,9 +293,12 @@
 
 .market-building-container {
 	&.filtered {
-		.amenity-grid,
-		.more-options {
-			display: block;
+		.hide-before-filtered {
+			display: flex !important;
+		}
+
+		.hide-when-filtered {
+			display: none;
 		}
 	}
 }

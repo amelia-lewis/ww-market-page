@@ -70,7 +70,7 @@ include ../partials/amenity-grid
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/50cf6504-d477-11e7-b0ba-0a636a339cd2/20140729_Columbia_Start_Up_Labs-36-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "167 Wayland", "167 Wayland Street, New York City", "$1,000", "$550", "$450", "https://www.wework.com/buildings/fulton-center--new-york-city--NY", "", false)
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "1500 Ridgley", "1500 Ridgley Street, New York City", "$900", "", "$450", "https://www.wework.com/buildings/fulton-center--new-york-city--NY", "", false)
 			
-			.row
+			.row.hide-before-filtered
 				.col-xs-12
 					+amenity-grid("Amenities", "Every building is equipped to empower your team, 24/7.", 
 												{icon: "web-internet-a", name: "Super-Fast Internet"},
@@ -86,7 +86,7 @@ include ../partials/amenity-grid
 												{icon: "com-phone", name: "Private Phone Booths"},
 												{icon: "transport-bicycle", name: "Bike Storage"})
 
-			.row
+			.row.hide-before-filtered
 				.col-xs-12
 					.more-options
 						h3.title-1 More Options
@@ -106,6 +106,22 @@ include ../partials/amenity-grid
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/50cf6504-d477-11e7-b0ba-0a636a339cd2/20140729_Columbia_Start_Up_Labs-36-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "200 Ashton", "200 Ashton Road, New York City", "$1,000", "$550", "$450", "https://www.wework.com/buildings/fulton-center--new-york-city--NY", "", false)
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "6 Yarrow", "6 Yarrow Street, New York City", "$900", "", "$450", "https://www.wework.com/buildings/fulton-center--new-york-city--NY", "", false)
 				.col-xs-12.col-sm-6: +building-card("https://cdn.wework.com/locations/image/38301a66-f0c9-11e7-ab56-1202be33576a/20171011_WeWork_Apollo_-_Common_Areas_-_Wide-2.jpg?auto=format%2Ccompress&dpr=2&ch=DPR%2CWidth&crop=false&fit=crop&w=450&h=220", "500 Hugo", "500 Hugo Street, New York City", "$900", "", "$450", "https://www.wework.com/buildings/fulton-center--new-york-city--NY", "", false)
+
+			.row.hide-when-filtered
+				.col-xs-12
+					+amenity-grid("Amenities", "Every building is equipped to empower your team, 24/7.", 
+												{icon: "web-internet-a", name: "Super-Fast Internet"},
+												{icon: "doc-print-a", name: "Business-Class Printers"},
+												{icon: "time-clock-c", name: "Daily Cleaning"},
+												{icon: "beverage-tea-a", name: "Micro-Roasted Coffee"},
+												{icon: "com-envelope", name: "Mail & Package Handling"},
+												{icon: "user-single-a-group", name: "IT Support"},
+												{icon: "time-calendar-a", name: "24/7 Building Access"},
+												{icon: "misc-globe", name: "Global Network"},
+												{icon: "doc-attachment", name: "Office Supplies"},
+												{icon: "beverage-beer", name: "Craft on Draft"},
+												{icon: "com-phone", name: "Private Phone Booths"},
+												{icon: "transport-bicycle", name: "Bike Storage"})
 
 			.row
 				.col-xs-12
