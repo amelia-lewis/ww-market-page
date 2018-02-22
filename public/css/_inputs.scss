@@ -178,6 +178,7 @@ input[type="checkbox"] {
 	margin: 0 -1px 0 0;
 	padding: 0 20px;
 	text-align: center;
+	@extend .text-light;
 	position: relative;
 	z-index: 1;
 	flex-grow: 1;

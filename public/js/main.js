@@ -117,16 +117,23 @@ filterBtnClose.on("click", function(e) {
 		$(".sales-callout-enterprise").hide();
 	}
 
-	if($('#desk-number').val() > 100 && $('#desk-number').val() < 999) {
+	if($('#desk-number').val() >= 100 && $('#desk-number').val() < 999) {
 		$(".sales-callout-mid-market").hide();
 		$(".sales-callout-custom-space").show();
 		$(".sales-callout-enterprise").hide();
 	}
 
-	if($('#desk-number').val() > 1000) {
+	if($('#desk-number').val() >= 1000) {
 		$(".sales-callout-mid-market").hide();
 		$(".sales-callout-enterprise").show();
 		$(".sales-callout-custom-space").hide();
+	}
+
+	if($('input:radio[name=company-size]:checked').val() == "1–19" || $('input:radio[name=company-size]:checked').val() == "10–999") {
+		$(".sales-callout-mid-market").hide();
+		$(".sales-callout-custom-space").hide();
+		$(".sales-callout-enterprise").hide();
+		console.log("poop");
 	}
 
 	if($('input:radio[name=company-size]:checked').val() == "100–999") {
