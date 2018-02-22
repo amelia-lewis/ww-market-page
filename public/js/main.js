@@ -172,6 +172,7 @@ $(document).keydown(function(e){
 	if(e.keyCode == 27) {
 		if (filters.hasClass('show')) {
 			filters.removeClass('show');
+			$("html, body").css({overflow: "auto"});
 		}
 	}
 });
