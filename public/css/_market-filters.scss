@@ -59,4 +59,142 @@
 		display: none;
 		margin: 0 0 0 20px;
 	}
+
+	// Filter Option (Multi)
+	.label--filter-option-multi-group {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 10px 0 0;
+
+		&.text-center {
+			justify-content: center;
+		}
+
+		.label--filter-option-multi {
+			position: relative;
+			@extend .text-light;
+			padding: 0 30px 0 10px;
+			margin: 0 0 10px;
+			height: 24px;
+			line-height: 24px;
+			border-radius: 12px;
+			transition: all 400ms;
+
+			&:not(:last-of-type) {
+				margin-right: 5px;
+			}
+
+			&.selected {
+				color: white;
+			}
+
+			input[type="checkbox"] {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				cursor: pointer;
+
+				&:before {
+					width: 100%;
+					height: 100%;
+					background: $gray-40;
+					border: 1px solid $gray-40;
+					border-radius: 12px;
+					z-index: -1;
+					transition: all 400ms;
+				}
+
+				&:after {
+					content: "✓";
+					position: absolute;
+					top: 3px;
+					right: 3px;
+					width: 18px;
+					height: 18px;
+					background: white;
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: all 400ms;
+				}
+				
+				&:checked:before {
+					background-color: $blue-50;
+					border-color: $blue-50;
+				}
+
+				&:checked:after {
+					color: $blue-50;
+					top: 3px;
+					right: 3px;
+					left: auto;
+					bottom: auto;
+				}
+			}
+		}
+	}
+
+	// Filter Option (Single)
+	.label--filter-option-group {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 10px 0 0;
+		
+		&.text-center {
+			justify-content: center;
+		}
+
+		.label--filter-option {
+			position: relative;
+			@extend .text-light;
+			padding: 0 15px;
+			margin: 0 0 0 -1px;
+			height: 44px;
+			line-height: 44px;
+
+			&.selected {
+				color: $blue-50;
+				z-index: 1;
+			}
+
+			input[type="radio"] {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				cursor: pointer;
+
+				&:before {
+					width: 100%;
+					height: 100%;
+					background: $white;
+					border: 1px solid $gray-40;
+					border-radius: 2px;
+					z-index: -1;
+				}
+
+				&:after {
+					display: none;
+				}
+				
+				&:checked:before {
+					border-color: $blue-50;
+				}
+			}
+
+			&:first-of-type input[type="radio"] {
+				border-radius: 2px 0 0 2px;
+			}
+
+			&:last-of-type input[type="radio"] {
+				border-radius: 0 2px 2px 0;
+			}
+		}
+	}
 }
