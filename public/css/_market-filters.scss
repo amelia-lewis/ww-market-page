@@ -153,9 +153,16 @@
 			position: relative;
 			@extend .text-light;
 			padding: 0 15px;
-			margin: 0 0 0 -1px;
+			margin: 0 0 -1px 0;
 			height: 44px;
 			line-height: 44px;
+			white-space: nowrap;
+			width: 100%;
+
+			@media (min-width: $screen-sm-min) {
+				width: auto;
+				margin: 0 0 0 -1px;
+			}
 
 			&.selected {
 				color: $blue-50;
@@ -169,6 +176,7 @@
 				top: 0;
 				left: 0;
 				cursor: pointer;
+				border-radius: 0;
 
 				&:before {
 					width: 100%;
@@ -195,6 +203,41 @@
 			&:last-of-type input[type="radio"] {
 				border-radius: 0 2px 2px 0;
 			}
+		}
+	}
+}
+
+.market-filters-sf {
+	.impact-2 {
+		font-size: 34px;
+		line-height: 30px;
+
+		@media (min-width: $screen-md-min) {
+			font-size: 50px;
+			line-height: 44px;
+			margin: 0 0 10px;
+		}
+	}
+
+	p {
+		@media (min-width: $screen-md-min) {
+			margin-bottom: 30px;
+		}
+	}
+	
+	input#desk-number {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media (min-width: $screen-sm-min) {
+			max-width: 200px;
+		}
+	}
+
+	label {
+		@media (min-width: $screen-md-min) {
+			margin-bottom: 30px;
 		}
 	}
 }
