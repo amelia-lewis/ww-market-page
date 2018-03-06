@@ -13,32 +13,38 @@ include ../partials/amenity-grid
 	.row
 		.col-xs-12
 			.filter-bar
-				.tooltip-wrapper
-					a.btn.btn--primary-action.btn-market-filters
-						i.bi_setting-eq-a
-						|  Filter Locations
-					.tooltip
-						| Our filters can help you refine your workspace results.
-						i.bi_interface-cross
-				.switch-text-group
-					label.label--switch-text(for='list-view') List
-						input#list-view(type='radio', name='toggle-view', value='list', checked)
-					label.label--switch-text(for='map-view') Map
-						input#map-view(type='radio', name='toggle-view', value='map')
-				ul.filter-results
-					li.desks-result
-						span
-						|  desk(s)
-					li.company-size-result
-						| Company size: 
-						span
-					li.area-result
-						span 
-						|  neighborhoods
-					li.move-in-result
-						span
-						|  move-in
-					a.btn.btn--tertiary-navigation.btn-market-filters-clear Clear Filters
+				label(for="desk-number") How many desks do you need?
+					input(type="number" id="desk-number" name="desk-number" placeholder="Approximate number" value="1")
+
+				label How many people are in your company?
+					.toggle-group
+						label.label--toggle(for='company-size-1') 1–19
+							input#company-size-1(type='radio', name='company-size', value='1–19')
+						label.label--toggle(for='company-size-2') 20–99
+							input#company-size-2(type='radio', name='company-size', value='20–99')
+						label.label--toggle(for='company-size-3') 100–999
+							input#company-size-3(type='radio', name='company-size', value='100–999')
+						label.label--toggle(for='company-size-3') 1000+
+							input#company-size-3(type='radio', name='company-size', value='1000+')
+
+				label When would you like to move in?
+					.toggle-group
+						label.label--toggle(for='move-in-march') Mar.
+							input#move-in-march(type='radio', name='move-in', value='March')
+						label.label--toggle(for='move-in-april') Apr.
+							input#move-in-april(type='radio', name='move-in', value='April')
+						label.label--toggle(for='move-in-other') Other
+							input#move-in-other(type='radio', name='move-in', value='Other')
+
+				label.label--dropdown(for="neighborhoods") In which neighborhoods?
+					select(id="neighborhoods" name="dropdown")
+						option All Neighborhoods
+						option(value="Manhattan") Manhattan
+						option(value="Queens") Queens
+						option(value="Brooklyn") Brooklyn
+					i.bi_interface-bottom
+
+				a.btn.btn--primary-action.btn-market-filters Find Workspace
 
 			.filter-bar-spacer
 

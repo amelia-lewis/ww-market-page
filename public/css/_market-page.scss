@@ -35,13 +35,9 @@
 	padding: $spacer-xs 0;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
-
-	@media (min-width: $screen-md-min) {
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-	}
+	align-items: center;
 
 	&.fixed {
 		position: fixed;
@@ -52,28 +48,28 @@
 		z-index: 100;
 	}
 
-	h1 {
-		font-size: 34px;
-		line-height: 40px;
-		letter-spacing: 0.5px;
-		flex-basis: 100%;
-		flex-shrink: 0;
+	> label {
+		margin: 0 0 20px 0;
+		width: 100%;
 
-		@media (min-width: $screen-md-min) {
-			flex-basis: auto;
-			margin: 0 20px 0 0;
+		@media (min-width: $screen-sm-min) {
+			margin: 0 20px 20px 0;
+			width: auto;
 		}
+	}
+
+	label[for="desk-number"] {
+		@media (min-width: $screen-sm-min) {
+			max-width: 200px;
+		}
+	}
+
+	.toggle-group {
+		margin: 10px 0 0 0;
 	}
 
 	.btn-market-filters {
-		margin: 0 10px 0 0;
-		padding: 0 20px;
-	}
-
-	.switch-text-group {
-		@media (min-width: $screen-md-min) {
-			display: none;
-		}
+		margin: 0;
 	}
 
 	.filter-results {
@@ -251,12 +247,12 @@
 	@media (min-width: $screen-md-min) {
 		width: calc((100vw - 40px - 32px) / 3);
 		max-width: 390px;
-		height: calc(100vh - 85px);
+		height: calc(100vh - 176px);
 	}
 
 	&.fixed {
 		position: fixed;
-		top: 83px;
+		top: 176px;
 	}
 
 	&.map-nyc {

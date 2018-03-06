@@ -67,24 +67,9 @@ $("input:radio").change(function(){
 	}
  });
 
-// Open filters
-filterBtn.on("click", function(e) {
-	filters.addClass("show");
-	$("html, body").css({overflow: "hidden"});
-	tooltip.removeClass("show");
-});
-
-$(".filter-results li").on("click", function(e) {
-	filters.addClass("show");
-	$("html, body").css({overflow: "hidden"});
-	tooltip.removeClass("show");
-});
 
 // Close and apply filters
-filterBtnClose.on("click", function(e) {
-	filters.removeClass("show");
-	$("html, body").css({overflow: "auto"});
-
+filterBtn.on("click", function(e) {
 	if($("input:radio").parent().hasClass("selected") || $("input:checkbox").parent().hasClass("selected") || $("#desk-number").val()) {
 		marketBuildingContainer.addClass("filtered");
 		filterBtnClear.show();
